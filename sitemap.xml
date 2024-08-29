@@ -16,6 +16,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/overview/</loc>
+         <lastmod>2024-08-29</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/refactor/</loc>
          <lastmod>2024-08-29</lastmod>
          <changefreq>daily</changefreq>
