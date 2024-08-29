@@ -1,0 +1,79 @@
+site_name: watsonx Code Assistant for Z Workshop
+repo_url: https://github.com/ibm-wsc/WCA4Z-Wildfire-Workshop/
+site_url: https://pages.github.io/ibm-wsc/WCA4Z-Wildfire-Workshop/
+edit_uri: edit/main/docs
+
+nav:
+    - Home: 'index.md'
+    # - Prerequisites: 'prerequisites.md'
+    # - Lab Assignments: 'lab-assignments.md'
+    - Lab Architecture: 'workshop-architecture.md'
+    - Presentations:
+      - Presentation: presentations/presentation.pdf
+    - Lab Documentation: 
+      - Understand: 'labs/understand.md'
+      - Refactor: 'labs/refactor.md'
+      - Transform: 'labs/transform.md'
+      # - Validate: 'labs/validate.md'
+
+theme: 
+  name: material
+  palette:
+    # - primary: indigo
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - font:
+        text: IBM Plex Sans
+        code: IBM Plex Mono
+  features: 
+    - search.suggest # adds text completion to search bar
+    - search.highlight
+    - navigation.instant
+    - navigation.instant.progress
+  favicon: images/wca4z-logo.svg
+  logo: images/wca4z-logo.svg
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright © 2024 IBM Z Washington Systems Center
+
+plugins:
+  - search
+  - htmlproofer
+  - autolinks
+  - print-site:
+      add_to_navigation: true
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - footnotes
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - attr_list
+  - toc:
+      permalink: true
