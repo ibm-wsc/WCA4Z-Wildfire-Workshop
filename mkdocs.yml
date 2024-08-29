@@ -1,6 +1,6 @@
 site_name: watsonx Code Assistant for Z Workshop
 repo_url: https://github.com/ibm-wsc/WCA4Z-Wildfire-Workshop/
-site_url: https://pages.github.io/ibm-wsc/WCA4Z-Wildfire-Workshop/
+site_url: https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/
 edit_uri: edit/main/docs
 
 nav:
