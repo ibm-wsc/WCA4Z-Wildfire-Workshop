@@ -1,0 +1,841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pages.github.io/ibm-wsc/WCA4Z-Wildfire-Workshop/labs/transform/">
+      
+      
+        <link rel="prev" href="../refactor/">
+      
+      
+      
+      <link rel="icon" href="../../images/wca4z-logo.svg">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Transform - watsonx Code Assistant for Z Workshop</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#transform-phase" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="watsonx Code Assistant for Z Workshop" class="md-header__button md-logo" aria-label="watsonx Code Assistant for Z Workshop" data-md-component="logo">
+      
+  <img src="../../images/wca4z-logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            watsonx Code Assistant for Z Workshop
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Transform
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ibm-wsc/WCA4Z-Wildfire-Workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="watsonx Code Assistant for Z Workshop" class="md-nav__button md-logo" aria-label="watsonx Code Assistant for Z Workshop" data-md-component="logo">
+      
+  <img src="../../images/wca4z-logo.svg" alt="logo">
+
+    </a>
+    watsonx Code Assistant for Z Workshop
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ibm-wsc/WCA4Z-Wildfire-Workshop/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workshop-architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab Architecture
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Presentations
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Presentations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../presentations/presentation.pdf" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Lab Documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Lab Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../understand/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Understand
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../refactor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Refactor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Transform
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Transform
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transform-the-refactored-service-code-from-cobol-to-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform the Refactored Service Code from COBOL to JAVA
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../print_page/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Print Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transform-the-refactored-service-code-from-cobol-to-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transform the Refactored Service Code from COBOL to JAVA
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="transform-phase">Transform Phase<a class="headerlink" href="#transform-phase" title="Permanent link">&para;</a></h1>
+<h2 id="transform-the-refactored-service-code-from-cobol-to-java">Transform the Refactored Service Code from COBOL to JAVA<a class="headerlink" href="#transform-the-refactored-service-code-from-cobol-to-java" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>In your zVA instance, open the web browser.</p>
+<p><img alt="zva-desktop-firefox" src="../../images/zva-desktop-firefox.png" /></p>
+</li>
+<li>
+<p>Click the <code>GitLab</code> bookmark from the bookmarks bar.</p>
+<p><img alt="gitlab-bookmark" src="../../images/gitlab-bookmark.png" /></p>
+</li>
+<li>
+<p>The GitLab page will prompt you for login credentials. Click the <code>Username or primary email</code> field and select the <code>wca4z-git</code> saved credentials.</p>
+<p><img alt="gitlab-login" src="../../images/gitlab-login.png" /></p>
+<p>After successfully logging in to GitLab, the GitLab Projects page will open. </p>
+</li>
+<li>
+<p>Open the Project named <code>wca4z/COBOLJavaBatch</code>.</p>
+<p><img alt="gitlab-projects" src="../../images/gitlab-projects.png" /></p>
+</li>
+<li>
+<p>Quickly look through all of the files included in the Project and notice that there are no COBOL components yet.</p>
+<p><img alt="gitlab-contents" src="../../images/gitlab-contents.png" /></p>
+</li>
+<li>
+<p>Open another new tab in the web browser and click the <code>Jenkins</code> bookmark from the bookmarks bar.</p>
+<p><img alt="jenkins-bookmark" src="../../images/jenkins-bookmark.png" /></p>
+</li>
+<li>
+<p>The Jenkins login page will appear. Select the saved credentials for <code>wca4z-jenkins</code> and log in.</p>
+<p><img alt="jenkins-login" src="../../images/jenkins-login.png" /></p>
+</li>
+<li>
+<p>After successfully logging in, the Jenkins Dashboard will appear with an option named <code>ADDIBuildWCA4ZProject</code>. </p>
+<p><img alt="jenkins-ADDIBuildWCA4ZProject" src="../../images/jenkins-ADDIBuildWCA4ZProject.png" /></p>
+</li>
+<li>
+<p>Click <code>ADDIBuildWCA4ZProject</code> and see that no previous jobs have been run.</p>
+<p><img alt="jenkins-ADDIBuildWCA4ZProject-2" src="../../images/jenkins-ADDIBuildWCA4ZProject-2.png" /></p>
+</li>
+<li>
+<p>Minimize the web browser and navigate back to VSCode. In the far left side of the screen, click the <code>Source Control</code> icon.</p>
+<p><img alt="vscode-source-control" src="../../images/vscode-source-control.png" /></p>
+</li>
+<li>
+<p>Click the <code>+</code> sign in the <em>Changes</em> section of the VSCode Source Control page to stage the COBOL programs and copybooks.</p>
+<p>You may need to hover over the <em>Changes</em> line in order for the <code>+</code> sign to appear.</p>
+<p><img alt="vscode-stage-changes" src="../../images/vscode-stage-changes.png" /></p>
+<p>If done correctly, the changes will move to the <em>Staged Changes</em> section.</p>
+<p><img alt="vscode-stage-changes-2" src="../../images/vscode-stage-changes-2.png" /></p>
+</li>
+<li>
+<p>Add a commit message for the changes. E.g., <code>Adjustments after Refactoring in LGACDB01</code>. </p>
+</li>
+<li>
+<p>Click the <em>Commit &amp; Push</em> button.</p>
+<p><img alt="vscode-commit-push" src="../../images/vscode-commit-push.png" /></p>
+</li>
+<li>
+<p>A new pop-up will appear prompting you for GitLab credentials. Enter the following and log in.</p>
+<ul>
+<li>Username: <code>wca4z-git</code></li>
+<li>Password: <code>P@assw0rd</code></li>
+</ul>
+<p><img alt="vscode-gitlab-login" src="../../images/vscode-gitlab-login.png" /></p>
+<p>After doing so, your changes should be committed and pushed to the GitLab repository.</p>
+</li>
+<li>
+<p>Navigate back to the Jenkins page in your web browser and refresh the page.</p>
+</li>
+<li>
+<p>You should see a new job that was automatically triggered with your pushed changes. Wait until all stages of the job are completed.</p>
+<p><img alt="jenkins-completed" src="../../images/jenkins-completed.png" /></p>
+</li>
+<li>
+<p>Click Job number from the left-side list, and then click <code>Console Output</code>.</p>
+<p>This could be <code>#2</code> or <code>#3</code>, for example. </p>
+<p><img alt="jenkins-job" src="../../images/jenkins-job.png" />
+<img alt="jenkins-console-output" src="../../images/jenkins-console-output.png" /></p>
+<p>The log for the job will appear.</p>
+</li>
+<li>
+<p>Look through the job log to see the actions that were performed.</p>
+<p><img alt="jenkins-console-output-2" src="../../images/jenkins-console-output-2.png" /> </p>
+<!--- TODO: add a high level overview of what the job did. --->
+</li>
+<li>
+<p>Navigate back to the GitLab tab in your browser and refresh it.</p>
+<p><img alt="gitlab-contents-2" src="../../images/gitlab-contents-2.png" /> </p>
+<p>You should see a few changes.
+- a new commit with a green check mark, and
+- a new <code>refactor</code> folder that was not present before</p>
+</li>
+<li>
+<p>Open the <code>refactor</code> folder in the GitLab browser page, then open the <code>cobol</code> sub-folder.</p>
+<p>The <code>LGACDB01</code> code will now be present.</p>
+<p><img alt="gitlab-lgaocdb01" src="../../images/gitlab-lgaocdb01.png" /> </p>
+</li>
+<li>
+<p>Navigate back to VSCode</p>
+</li>
+<li>
+<p>Right click the <code>LGACDB01.cbl</code> file, hover over <code>watsonx Code Assistant for Z</code>, and select <code>Select COBOL for transformation</code>. </p>
+<p><img alt="vscode-lgacdb01cbl-refactor" src="../../images/vscode-lgacdb01cbl-refactor.png" /> </p>
+<p>Note: the same task can be performed by selecting the <code>Import COBOL</code> button in the bottom-left corner of VSCode under the <code>IBM WATSONX CODE ASSISTANT FOR Z</code> section.</p>
+<p>Either way, the <code>LGACDB01.cbl</code> file should now be present in the <code>IBM WATSONX CODE ASSISTANT FOR Z</code> section in the bottom-left of VSCode.</p>
+</li>
+<li>
+<p>Click the icon next to <code>LGACDB01.cbl</code> to <code>Generate Java classes</code>.</p>
+<p><img alt="vscode-generate-java-classes" src="../../images/vscode-generate-java-classes.png" /> </p>
+<p>A new input bar will appear in the top-middle of VSCode, prompting you for a Java directory,</p>
+</li>
+<li>
+<p>Select <code>Input absolute path</code>, and add the following to the end of the default path: <code>\src\main\java</code>.</p>
+<p>The absolute path should be the following:</p>
+<p><code>c:\Users\Administrator\Desktop\WCA4Z Lab Data\COBOLJavaBatch\src\main\java</code></p>
+<p><img alt="vscode-generate-java-classes-2" src="../../images/vscode-generate-java-classes-2.png" /> </p>
+</li>
+<li>
+<p>Press enter.</p>
+<p>A new tab for <code>Java Class design</code> should open.</p>
+<p><img alt="vscode-java-class-design" src="../../images/vscode-java-class-design.png" /> </p>
+</li>
+<li>
+<p>Optionally expand the different artifacts using the down arrows. Keep all of the default values.</p>
+</li>
+<li>
+<p>At the bottom-right of <code>Java Class design</code> tab, click <em>Generate Java classes</em>.</p>
+<p><img alt="vscode-java-class-design-2" src="../../images/vscode-java-class-design-2.png" /> </p>
+</li>
+<li>
+<p>In the left-side menu of VSCode, navigate to the <code>src\main\com\ibm\wcaz</code> folder to see the list of generated Java classes.</p>
+<p><img alt="vscode-java-classes" src="../../images/vscode-java-classes.png" /> </p>
+</li>
+<li>
+<p>From this folder, open the file named <code>Lgacdb01.java</code>.</p>
+<p><img alt="vscode-Lgacdb01-java" src="../../images/vscode-Lgacdb01-java.png" /> </p>
+<p>A new section named <code>JAVA PROJECTS</code> will appear at the bottom-left of VSCode the Java projects will be generated.</p>
+<p><img alt="vscode-java-projects" src="../../images/vscode-java-projects.png" /> </p>
+<p>You may need to expand the <code>JAVA PROJECTS</code> section to see the projects.</p>
+<p>The Java classes and method names can be found in the <code>refactor\cobol</code> folder in the <code>IBM WATSONX CODE ASSISTANT FOR Z</code> section. </p>
+<p><img alt="vscode-class-method" src="../../images/vscode-class-method.png" /> </p>
+<p>You may need to expand the <code>IBM WATSONX CODE ASSISTANT FOR Z</code> section to see the classes and methods.</p>
+</li>
+<li>
+<p>In the <code>refactor\cobol</code> folder, open the method named <code>insertCustomer</code>.</p>
+<p><img alt="vscode-insertCustomer" src="../../images/vscode-insertCustomer.png" /> </p>
+</li>
+<li>
+<p>In the <code>refactor\cobol</code> folder, click the icon next to the <code>insertCustomer</code> filename to generate the Java method.</p>
+<p><img alt="vscode-insertCustomer-generate-method" src="../../images/vscode-insertCustomer-generate-method.png" /> </p>
+<!--- Note: if this returns an error, try to close out of the java files in the editor. --->
+</li>
+<li>
+<p>After the Java method gets generated in the right-side panel, click the <code>Insert</code> button. </p>
+<p><img alt="vscode-insertCustomer-method" src="../../images/vscode-insertCustomer-method.png" /> </p>
+<p>The generated java method for <code>insertCustomer</code> will be inserted in the Java class.</p>
+<p><img alt="vscode-insertCustomer-method-2" src="../../images/vscode-insertCustomer-method-2.png" /> </p>
+</li>
+<li>
+<p>Repeat this process for the <code>writeErrorMessage</code> function.</p>
+<p><img alt="vscode-writeErrorMessage" src="../../images/vscode-writeErrorMessage.png" /></p>
+<p><img alt="vscode-writeErrorMessage-2" src="../../images/vscode-writeErrorMessage-2.png" /></p>
+<p><img alt="vscode-writeErrorMessage-3" src="../../images/vscode-writeErrorMessage-3.png" /></p>
+</li>
+</ol>
+<!--- 
+TODO: Show that there are problems in the Java code that need to be solved.
+      Take the lab user through the process of fixing the problems, then move on to validate phase.
+ --->
+
+<p>In this <em>Transform</em> phase,</p>
+<ol>
+<li>We used the workbook <code>LGACDB01</code> from <em>Refactor</em> phase for <code>INSERT-CUSTOMER</code> functionality.</li>
+<li>We generated Java classes and Java methods for the <code>INSERT-CUSTOMER</code> service.</li>
+</ol>
+<!--- TODO: improve this summary --->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2024 IBM Z Washington Systems Center
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["search.suggest", "search.highlight", "navigation.instant", "navigation.instant.progress"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
