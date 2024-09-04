@@ -4,8 +4,8 @@
 
 | Activity       | Time     | 
 | ---                  | ---           |
-| [**Presentation**](#presentation) and Demonstration             | 1:00 pm - 2:00 pm US EDT   |
-| [**Hands-on, self-paced lab**](#lab)           | 2:00 pm - 5:00 pm US EDT      |
+| [**Presentation**](#presentation) and Demonstration             | 11:00 pm - noon US EDT   |
+| [**Hands-on, self-paced lab**](#lab)           | noon - 5:00 pm US EDT      |
 
 ## Presentation
 
