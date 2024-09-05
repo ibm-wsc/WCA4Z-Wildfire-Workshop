@@ -24,7 +24,7 @@ In the *Refactor* phase, the COBOL application developer uses the *Refactoring A
     
     Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant.  In addition, a GitLab server will be started that will be used later in the *Transform* phase.  
 
-4. Once you receive the message `IBM watsonx Code Assistant for Z Refactoring Assistant started` in the PuTTY console, you can close PuTTY.
+4. Once you receive the message `IBM watsonx Code Assistant for Z Refactoring Assistant started` in the PuTTY console, you can close PuTTY by clicking on the **X** icon in the upper-right corner of the PuTTY window and clicking *OK* on the *PuTTY Exit Confirmation* popup window.
 
     ![putty-ra-started](../images/putty-ra-started.png)
 
@@ -67,7 +67,7 @@ The *Refactor* phase and the remaining phases in the lab (*Transform* and *Valid
     - Email address: `dev@wca4z-ra.ibm.com`
     - Password: `password`
 
-    ![vscode-addi-login](../images/vscode-addi-login.png)
+    ![vscode-addi-login-2](../images/vscode-addi-login-2.png){ width="557" height="325"}
 
     After logging in, a new input field will appear in the top-middle of VS Code to select a project.
 

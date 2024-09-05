@@ -27,7 +27,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
 ## Explore the application using ADDI and IBM Developer for z/OS
 
-6. Open [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} from the taskbar. IDz is built on the open source Eclipse project.  The *ADDI Analyze Client* functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. 
+6. Open [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The *ADDI Analyze Client* functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. 
 
     ![zva-desktop-idz](../images/zva-desktop-idz.png)
 
@@ -47,7 +47,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
 
 
-8. Once you see the *Explore projects* tab, right-click on the empty list of projects and click *Get Project List*.
+8. Click the *Explore* tab in the middle of IDz, near the top. Once you see the *Explore projects* tab, right-click on the empty list of projects and click *Get Project List*.
 
     ![idz-get-projects](../images/idz-get-projects.png)
 
@@ -55,7 +55,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
     ![idz-genapp-project](../images/idz-genapp-project.png)
 
-9. Click the GenApp project to highlight it. This will bring up a new pane on the right side of the page that shows the many charts, graphs and reports that are provided by ADDI.  Information about these reports can be found in the [ADDI documentation](https://www.ibm.com/docs/en/addi/6.1.2?topic=guide-analyzing-applications-ad-analyze){target="_blank" rel="noopener"}.  
+9. Click the GenApp project to highlight it. This will bring up a new pane on the right side of the page that shows the many charts, graphs and reports that are provided by ADDI.  Information about these reports can be found in the [ADDI documentation](https://www.ibm.com/docs/en/addi/6.1.3?topic=guide-analyzing-applications-ad-analyze){target="_blank" rel="noopener"}.  
 
     Double-click *Program Callgraph* in the new pane.
 
@@ -75,7 +75,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
     **Note:** Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the *x* icon on its tab and then repeat step 4 and this step.
 
-11. In the left-side of the page, you will see a Graph Inventory. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the *COBOL Programs* section to see the list of COBOL programs that are part of GenApp.
+11. In the left-side of the page, you will see a *Graph Inventory*. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the *COBOL Programs* section to see the list of COBOL programs that are part of GenApp.
 
     ![idz-inventory-cobol](../images/idz-inventory-cobol.png)
 
