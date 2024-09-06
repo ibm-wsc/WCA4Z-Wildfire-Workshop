@@ -235,7 +235,7 @@ In the third step, the Java developer, with help from the COBOL developer if nec
 
     <!--- Note: if this returns an error, try to close out of the java files in the editor. --->
 
-    The large language model (LLM) will begin to generate Java code for the *getAvgMotPremium* Java method which matches the functionality of the *3100-GET-AVG-MOT-PREMIUM* COBOL paragraph.
+    The large language model (LLM) will begin to generate Java code for the *getAvgMotPremium3100* Java method which matches the functionality of the *3100-GET-AVG-MOT-PREMIUM* COBOL paragraph.
 
 35. After the Java method gets generated in the right-side panel, click the *Insert* button. 
 
