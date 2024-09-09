@@ -458,6 +458,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../labs/explain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Explain Phase
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../labs/understand/" class="md-nav__link">
         
   
@@ -659,9 +680,18 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#labs-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Explain Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#labs-understand" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Understand Phase
+      7. Understand Phase
     </span>
   </a>
   
@@ -670,7 +700,7 @@
           <li class="md-nav__item">
   <a href="#labs-refactor" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Refactor Phase
+      8. Refactor Phase
     </span>
   </a>
   
@@ -679,7 +709,7 @@
           <li class="md-nav__item">
   <a href="#labs-transform" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Transform Phase
+      9. Transform Phase
     </span>
   </a>
   
@@ -688,7 +718,7 @@
           <li class="md-nav__item">
   <a href="#labs-validate" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Validate Phase
+      10. Validate Phase
     </span>
   </a>
   
@@ -802,9 +832,18 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#labs-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Explain Phase
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#labs-understand" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Understand Phase
+      7. Understand Phase
     </span>
   </a>
   
@@ -813,7 +852,7 @@
           <li class="md-nav__item">
   <a href="#labs-refactor" class="md-nav__link">
     <span class="md-ellipsis">
-      7. Refactor Phase
+      8. Refactor Phase
     </span>
   </a>
   
@@ -822,7 +861,7 @@
           <li class="md-nav__item">
   <a href="#labs-transform" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Transform Phase
+      9. Transform Phase
     </span>
   </a>
   
@@ -831,7 +870,7 @@
           <li class="md-nav__item">
   <a href="#labs-validate" class="md-nav__link">
     <span class="md-ellipsis">
-      9. Validate Phase
+      10. Validate Phase
     </span>
   </a>
   
@@ -1093,7 +1132,68 @@
 <p>If you are interested in converting parts of your COBOL application to Java, then after the <em>Understand</em> and <em>Refactor</em> phases you will perform the <em>Transform</em> and <em>Validate</em> phases.</p>
 <p>The lab works with a sample COBOL application and gives an idea of what is involved in each phase.  </p>
 <p>In order to navigate through the lab, click the link at the bottom right of this page to start the <em>Understand</em> phase.  Follow the instructions on each page in order, and at the bottom of each page you'll see the link to the next page in the lab.</p>
-<p>Click the <em>Understand Phase</em> link at the lower right to get started!</p></section><section class="print-page" id="labs-understand"><h1 id="labs-understand-understand-phase">Understand Phase<a class="headerlink" href="#labs-understand-understand-phase" title="Permanent link">&para;</a></h1>
+<p>Click the <em>Understand Phase</em> link at the lower right to get started!</p></section><section class="print-page" id="labs-explain"><h1 id="labs-explain-explain">Explain<a class="headerlink" href="#labs-explain-explain" title="Permanent link">&para;</a></h1>
+<h2 id="labs-explain-overview-of-the-explain-phase">Overview of the Explain Phase<a class="headerlink" href="#labs-explain-overview-of-the-explain-phase" title="Permanent link">&para;</a></h2>
+<p>The purpose of the Explain phase is to understand your code. You may need to do that for a number of reasons such as learning, troubleshooting, documentation, testing, maintenance, and modernization. This capability takes advantage of generative AI based on IBM's Granite foundation model in order to explain in natural language what your code is doing, whether it's COBOL or JCL.</p>
+<p>In order to generate explanations, all you need to do is highlight the area of code for which you want to generate an explanation, right click, and select a <strong>simple</strong>, <strong>detailed</strong>, or <strong>guided</strong> explanation type.</p>
+<ul>
+<li>Simple: A simple summary explanation provides the business purpose and a high-level summary of code function.</li>
+<li>Detailed: A detailed explanation provides the business purpose, the inputs, outputs, and key data records, as well as a detailed functional summary of code function.</li>
+<li>Guided: A guided explanation provides the business purpose and a step-by-step description of the code function.</li>
+</ul>
+<h2 id="labs-explain-cobol-code-explanation">COBOL Code Explanation<a class="headerlink" href="#labs-explain-cobol-code-explanation" title="Permanent link">&para;</a></h2>
+<h3 id="labs-explain-connecting-to-the-watsonx-code-assistant-for-z-llm">Connecting to the watsonx Code Assistant for Z LLM<a class="headerlink" href="#labs-explain-connecting-to-the-watsonx-code-assistant-for-z-llm" title="Permanent link">&para;</a></h3>
+<p>Code explanations are generated by the watsonx Code Assistant for Z LLM running in IBM Cloud. In order to connect your lab environment to the LLM, you will need to enter an API key into your Virtual Studio Code instance. This API key will be provided by your lab instructor.</p>
+<ol>
+<li>Log in to your Velocity Pilot environment. You can find connection details on the <a href="#lab-assignments">Lab Assignments</a> page.</li>
+<li>
+<p>In your Velocity Pilot environment, open Virtual Studio Code (VS Code) from the Desktop.</p>
+<p><img alt="explain-desktop" src="../images/explain-desktop.png" /></p>
+</li>
+<li>
+<p>At the bottom Explorer pane on the left, expand the <em>IBM WATSONX CODE ASSISTANT FOR Z</em> section if it is not already expanded.</p>
+<p>You should see a prompt to <em>Enter API key</em>.</p>
+<p><img alt="vscode-apikey" src="../images/vscode-apikey.png" /></p>
+</li>
+<li>
+<p>Click the <em>Enter API key</em> prompt. An input bar will appear in the top-middle of the page. Input the instructor-provided API key and press <em>Enter</em>.</p>
+<p><img alt="vscode-apikey-prompt" src="../images/vscode-apikey-prompt.png" /></p>
+<p>If this was successful, the <em>Enter API key</em> prompt should disappear and you should see a message popup in the lower right that says <em>Connected to watsonx Code Assistant for Z</em>.</p>
+</li>
+</ol>
+<h3 id="labs-explain-generating-cobol-code-explanations">Generating COBOL Code Explanations<a class="headerlink" href="#labs-explain-generating-cobol-code-explanations" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>In the top of the Explorer pane on the left, expand "CLIENTCOBOL" if it is not already expanded. You will see a selection of COBOL programs that end with <code>.cbl</code>.</p>
+<p><img alt="explain-clientcobol" src="../images/explain-clientcobol.png" /></p>
+</li>
+<li>
+<p>Left-click on the file named <code>LGACDB01.cbl</code> to open it in the editor window. Scroll down to line 232 in the code which contains the string <code>INSERT CUSTOMER.</code></p>
+<p><img alt="explain-insertcustomer" src="../images/explain-insertcustomer.png" /></p>
+</li>
+<li>
+<p>Highlight the <code>INSERT CUSTOMER</code> paragraph which are lines 232 through 304 of <code>LGACDB01.cbl</code></p>
+<p><em>Tip</em>: Rather than clicking and dragging your cursor, it may be easier to highlight all of line 232, then holding your <code>SHIFT</code> and Down Arrow keys.</p>
+</li>
+<li>
+<p>Right-click on the highlighted lines, hover over the "watsonx Code Assistant for Z" option, and select "Generate Simple Explanation".</p>
+<p><img alt="explain-simple" src="../images/explain-simple.png" /></p>
+<p>A new tab will open on the right side of the screen with the generated explanation.</p>
+<p><img alt="explain-simple-2" src="../images/explain-simple-2.png" /></p>
+</li>
+<li>
+<p>Repeat the previous step to generate <em>Detailed</em> and <em>Guided</em> explanations of the same COBOL paragraph.</p>
+<p>You should notice an increase in the level of detail in the Detailed and Guided explanations. </p>
+<p>Code Explanation provides the ability to regenerate the explanation, download it, insert it into the COBOL code as a comment, or copy it.</p>
+<p><img alt="explain-options" src="../images/explain-options.png" /></p>
+</li>
+</ol>
+<p>In the <em>Explain</em> phase, </p>
+<ol>
+<li>We learned more about what the <code>INSERT CUSTOMER</code> paragraph is doing in the LGACDB01 COBOL program.</li>
+<li>We created simple, detailed, and guided explanations of the paragraph.</li>
+<li>We learned how to insert these explanations into the code as comments or download them for external use.</li>
+</ol></section><section class="print-page" id="labs-understand"><h1 id="labs-understand-understand-phase">Understand Phase<a class="headerlink" href="#labs-understand-understand-phase" title="Permanent link">&para;</a></h1>
 <h2 id="labs-understand-overview-of-the-understand-phase">Overview of the Understand phase<a class="headerlink" href="#labs-understand-overview-of-the-understand-phase" title="Permanent link">&para;</a></h2>
 <p>During the <em>Understand</em> phase an application architect uses <em>Application Discovery and Delivery Intelligence (ADDI)</em> to analyze an application, primarily through its source code, but also often through other artifacts.  The analysis performed by ADDI is stored in an <em>ADDI Project</em>, using a relational database schema.  The application architect uses the <em>ADDI Analyze Client</em> to create and view charts, graphs and reports in order to help gain a better understanding of the application and identify candidates for refactoring.</p>
 <p><strong>Note:</strong> Even if an enterprise already has a perfect understanding of their COBOL application, the <em>Understand</em> phase is a prerequisite for the <em>Refactor</em> phase, because the components used in the <em>Refactoring</em> phase read an ADDI project's database.</p>
