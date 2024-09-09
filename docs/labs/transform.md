@@ -280,25 +280,23 @@ It is anticipated that the code returned from the LLM will not be perfect and re
 
     ![vscode-connection](../images/vscode-connection.png)
 
-    The red underline indicating an error should disappear.
-
-39. You may see a problem stating *The method validateCustomer310a() in the type WsWork is not applicable for the arguments (char)* in the list of problems for *WsWork.java*.  The instructors have received this problem sometimes but not always.  If you don't have this problem proceed to the next step, step 5.
-
-    ![vscode-validatecustomer](../images/vscode-validateCustomer310a-problem.png)
-
-    The problem here is that when the LLM generated a method for *validateCustomer310a*, it gave it no arguments, but when it generated the method for *getAvgMotPremium3100*, it put an argument in the call to *validateCustomer310a*.   This is an example of a situation where the Java developer would have to decide what the proper course of action is to remediate this. Depending on the nature of the problem, the Java developer may be able to resolve the issue on their own without requiring knowledge of the original COBOL source from which the Java method is derived; on the other hand, they may need some help from the COBOL developer with application knowledge.
-
-    For the purposes of this lab, choose the simplest action and remove the argument from the method call.  That is, change *validateCustomer310a(wsCustomerExists)* to *validateCustomer310a()* by choosing the "quick fix" *Remove argument to match 'validateCustomer310a()'*.
-
-    ![vscode-fix-validatecustomer](../images/vscode-remove-arg-to-validateCustomer310a.png)
-
-40. After you fix the previous problem, a new problem may appear in the *getAvgMotPremium3100* method- to fix this, hover the cursor to *JdbcConnection.connection()* underlined with red. Select *Quick fix* and then select *Add exception to existing catch clause*. 
-
+    Although using the *connection()* method fixes one error, another one is generated, causing the red underline indicating an error to remain. The 
+    *connection()* method throws a ClassNotFoundException, which is not handled by the try-catch block where our change was made. Hover 
+    over the red underline, click *Quick Fix*, then click *Add catch clause to surrounding try*. The red underline indicating an error should disappear.
     ![vscode-connection-2](../images/vscode-connection-2.png)
 
-39. The problems identified in *Getmavg.java* should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph *1000-EXIT* was turned into an empty method except for a *TODO comment*, so you can remove the *TODO comment* from the code as well to remove this from the problem list.
+39. Go to method *validateCustomer310A* and repeat the previous step to fix `connection`.
 
-You should no longer have problems in the *WsWork.java* or *Getmavg.java* files indicated by red numbers next to the filenames. You may have some *issues* or *warnings*, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the *Validate* phase.
+    ![vscode-validatecustomerconnection](../images/vscode-validatecustomer-connection.png)
+
+40. The final critical errors are in method *calcReturnPremium4100()*. Inside *calcReturnPremium4100()*, the method *getWsAvgPremium()* is undefined for the class WsInRec. In
+    this case, *getWsAvgPremium()* is actually defined in class *WsWork* (the class being edited). In the two lines calling *getWsAvgPremium()*, change `wsInRec` to `this` to fix the errors.
+
+    ![vscode-calcreturn-this](../images/vscode-calcreturn-this.png)
+
+41. The problems identified in *Getmavg.java* should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph *1000-EXIT* was turned into an empty method except for a *TODO comment*, so you can remove the *TODO comment* from the code as well to remove this from the problem list.
+
+You should no longer have problems in the *WsWork.java* or *Getmavg.java* files indicated by red numbers next to the filenames. You may have some *warnings* or *TODOs*, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the *Validate* phase.
 
 In this *Transform* phase,
 
