@@ -13,6 +13,7 @@ nav:
     - Lab Assignments: 'lab-assignments.md'
     - Lab Documentation: 
       - Lab Overview: 'labs/overview.md'
+      - Explain Phase: 'labs/explain.md'
       - Understand Phase: 'labs/understand.md'
       - Refactor Phase: 'labs/refactor.md'
       - Transform Phase: 'labs/transform.md'
