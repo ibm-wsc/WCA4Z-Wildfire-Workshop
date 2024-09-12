@@ -9,7 +9,7 @@ First, Java classes are created to implement a data model based on COBOL group i
 
 In the second step, the empty business logic methods are created by the generative AI model.  The source COBOL paragraph is sent to the watsonx Code Assistant for Z service running in IBM Cloud, and this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.
 
-In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the functions it is expected to perform. 
+In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the function it is expected to perform. 
 
 ## Transform the Refactored Service Code from COBOL to JAVA
 
@@ -262,7 +262,7 @@ It is anticipated that the code returned from the LLM will not be perfect and re
 -  problems that require a little bit of investigation by the Java developer but are within the knowledge domain of the Java developer
 -  problems that may require some knowledge of the original application and thus may require some collaboration with the COBOL application developer
 
-**Note:** The LLM used by watsonx Code Assistant for Z is constantly improved and is updated frequently.  It is expected that the number of problems to resolve will decrease over time as the LLM improves- in fact, **there is always the chance that recent model updates might cause the results that are returned during the lab to differ from what is documented here, in which case the instructions as shown here may not work correctly!  If this occurs, the instructors will tell the students during the lab what alterations to the lab instructions are necessary in order to resolve the problems. (Or they'll tell you to go home early if they can't figure it out.)**.  The remainder of this section lists the problems that we expect you to have to contend with, subject to the previous disclaimer.
+**Note:** The LLM used by watsonx Code Assistant for Z is constantly improved and is updated frequently.  It is expected that the number of problems to resolve will decrease over time as the LLM improves- in fact, **there is always the chance that recent model updates might cause the results that are returned during the lab to differ from what is documented here, in which case the instructions as shown here may not work correctly!  If this occurs, the instructors will tell the students during the lab what alterations to the lab instructions are necessary in order to resolve the problems. (Or they'll tell you to go home early if they can't figure it out.)**  The remainder of this section lists the problems that we expect you to have to contend with, subject to the previous disclaimer.
 
 1. Select *View->Problems* from the VS Code menu to see a list of problems in the bottom portion of VS Code.    
 

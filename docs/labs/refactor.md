@@ -4,9 +4,9 @@
 
 In the *Refactor* phase, the COBOL application developer uses the *Refactoring Assistant* VS Code extension to extract parts of the COBOL application into a modular business service.  In the typical workflow the application architect has identified the functionality to refactor and has communicated this to the COBOL application developer.   In this lab the functionality within the *GenApp* application that calculates a customer's average motor vehicle insurance policy premiums has been selected.
 
-## Start the Refactoring Assistant
+## Start the Refactoring Assistant server
 
-*Refactoring Assistant* is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant within the VM by following the instructions in this section.
+In addition to the *Refactoring Assistant* VS Code extension that you'll be using shortly, there is a server component to *Refactoring Assistant* that is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant server within the VM by following the instructions in this section.
 
 1. Open *PuTTY* from the taskbar by clicking on the icon highlighted in the screen snippet below:
 
@@ -22,7 +22,7 @@ In the *Refactor* phase, the COBOL application developer uses the *Refactoring A
 
     This warning should only appear the first time you load the *wca4z-ra* session.
     
-    Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant.  In addition, a GitLab server will be started that will be used later in the *Transform* phase.  
+    Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant server.  In addition, a GitLab server will be started that will be used later in the *Transform* phase.  
 
 4. Once you receive the message `IBM watsonx Code Assistant for Z Refactoring Assistant started` in the PuTTY console, you can close PuTTY by clicking on the **X** icon in the upper-right corner of the PuTTY window and clicking *OK* on the *PuTTY Exit Confirmation* popup window.
 

@@ -23,7 +23,7 @@ During the *Understand* phase an application architect uses *Application Discove
 ## Introducing GenApp
 In this lab, you will be using the general insurance application, **GenApp**. GenApp is a sample CICS COBOL application that provides transactions that *could be* used by an insurance company to create and manage its customers and insurance policies.  *Could be* was italicized in the previous sentence as GenApp is provided primarily for educational and testing purposes- if you are an actual insurance company it is likely that market forces would encourage you to use transactions that are slightly more sophisticated than the ones in GenApp.
 
-You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application){target="_blank" rel="noopener"} and its architecture [here](https://www.ibm.com/docs/en/cics-ts/6.1?topic=application-architecture){target="_blank" rel="noopener"}.
+You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application){target="_blank" rel="noopener"}.
 
 ## Explore the application using ADDI and IBM Developer for z/OS
 
