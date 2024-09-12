@@ -555,9 +555,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-the-refactoring-assistant" class="md-nav__link">
+  <a href="#start-the-refactoring-assistant-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Start the Refactoring Assistant
+      Start the Refactoring Assistant server
     </span>
   </a>
   
@@ -695,9 +695,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#start-the-refactoring-assistant" class="md-nav__link">
+  <a href="#start-the-refactoring-assistant-server" class="md-nav__link">
     <span class="md-ellipsis">
-      Start the Refactoring Assistant
+      Start the Refactoring Assistant server
     </span>
   </a>
   
@@ -742,8 +742,8 @@
 <h1 id="refactor-phase">Refactor Phase<a class="headerlink" href="#refactor-phase" title="Permanent link">&para;</a></h1>
 <h2 id="overview-of-the-refactor-phase">Overview of the Refactor phase<a class="headerlink" href="#overview-of-the-refactor-phase" title="Permanent link">&para;</a></h2>
 <p>In the <em>Refactor</em> phase, the COBOL application developer uses the <em>Refactoring Assistant</em> VS Code extension to extract parts of the COBOL application into a modular business service.  In the typical workflow the application architect has identified the functionality to refactor and has communicated this to the COBOL application developer.   In this lab the functionality within the <em>GenApp</em> application that calculates a customer's average motor vehicle insurance policy premiums has been selected.</p>
-<h2 id="start-the-refactoring-assistant">Start the Refactoring Assistant<a class="headerlink" href="#start-the-refactoring-assistant" title="Permanent link">&para;</a></h2>
-<p><em>Refactoring Assistant</em> is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant within the VM by following the instructions in this section.</p>
+<h2 id="start-the-refactoring-assistant-server">Start the Refactoring Assistant server<a class="headerlink" href="#start-the-refactoring-assistant-server" title="Permanent link">&para;</a></h2>
+<p>In addition to the <em>Refactoring Assistant</em> VS Code extension that you'll be using shortly, there is a server component to <em>Refactoring Assistant</em> that is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant server within the VM by following the instructions in this section.</p>
 <ol>
 <li>
 <p>Open <em>PuTTY</em> from the taskbar by clicking on the icon highlighted in the screen snippet below:</p>
@@ -757,7 +757,7 @@
 <p>After clicking <em>Open</em>, you will receive a security warning. Select <em>Accept</em>.</p>
 <p><img alt="putty-security" src="../../images/putty-security.png" /></p>
 <p>This warning should only appear the first time you load the <em>wca4z-ra</em> session.</p>
-<p>Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant.  In addition, a GitLab server will be started that will be used later in the <em>Transform</em> phase.  </p>
+<p>Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant server.  In addition, a GitLab server will be started that will be used later in the <em>Transform</em> phase.  </p>
 </li>
 <li>
 <p>Once you receive the message <code>IBM watsonx Code Assistant for Z Refactoring Assistant started</code> in the PuTTY console, you can close PuTTY by clicking on the <strong>X</strong> icon in the upper-right corner of the PuTTY window and clicking <em>OK</em> on the <em>PuTTY Exit Confirmation</em> popup window.</p>

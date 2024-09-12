@@ -1210,7 +1210,7 @@
 </ol>
 <h2 id="labs-understand-introducing-genapp">Introducing GenApp<a class="headerlink" href="#labs-understand-introducing-genapp" title="Permanent link">&para;</a></h2>
 <p>In this lab, you will be using the general insurance application, <strong>GenApp</strong>. GenApp is a sample CICS COBOL application that provides transactions that <em>could be</em> used by an insurance company to create and manage its customers and insurance policies.  <em>Could be</em> was italicized in the previous sentence as GenApp is provided primarily for educational and testing purposes- if you are an actual insurance company it is likely that market forces would encourage you to use transactions that are slightly more sophisticated than the ones in GenApp.</p>
-<p>You can read more about GenApp <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application" rel="noopener" target="_blank">here</a> and its architecture <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=application-architecture" rel="noopener" target="_blank">here</a>.</p>
+<p>You can read more about GenApp <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application" rel="noopener" target="_blank">here</a>.</p>
 <h2 id="labs-understand-explore-the-application-using-addi-and-ibm-developer-for-zos">Explore the application using ADDI and IBM Developer for z/OS<a class="headerlink" href="#labs-understand-explore-the-application-using-addi-and-ibm-developer-for-zos" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -1297,8 +1297,8 @@
 </ol></section><section class="print-page" id="labs-refactor"><h1 id="labs-refactor-refactor-phase">Refactor Phase<a class="headerlink" href="#labs-refactor-refactor-phase" title="Permanent link">&para;</a></h1>
 <h2 id="labs-refactor-overview-of-the-refactor-phase">Overview of the Refactor phase<a class="headerlink" href="#labs-refactor-overview-of-the-refactor-phase" title="Permanent link">&para;</a></h2>
 <p>In the <em>Refactor</em> phase, the COBOL application developer uses the <em>Refactoring Assistant</em> VS Code extension to extract parts of the COBOL application into a modular business service.  In the typical workflow the application architect has identified the functionality to refactor and has communicated this to the COBOL application developer.   In this lab the functionality within the <em>GenApp</em> application that calculates a customer's average motor vehicle insurance policy premiums has been selected.</p>
-<h2 id="labs-refactor-start-the-refactoring-assistant">Start the Refactoring Assistant<a class="headerlink" href="#labs-refactor-start-the-refactoring-assistant" title="Permanent link">&para;</a></h2>
-<p><em>Refactoring Assistant</em> is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant within the VM by following the instructions in this section.</p>
+<h2 id="labs-refactor-start-the-refactoring-assistant-server">Start the Refactoring Assistant server<a class="headerlink" href="#labs-refactor-start-the-refactoring-assistant-server" title="Permanent link">&para;</a></h2>
+<p>In addition to the <em>Refactoring Assistant</em> VS Code extension that you'll be using shortly, there is a server component to <em>Refactoring Assistant</em> that is delivered as an Open Container Initiative (OCI) image that runs as a container in a Linux Virtual Machine (VM).  Your lab environment provides this Linux VM but you need to start the Refactoring Assistant server within the VM by following the instructions in this section.</p>
 <ol>
 <li>
 <p>Open <em>PuTTY</em> from the taskbar by clicking on the icon highlighted in the screen snippet below:</p>
@@ -1312,7 +1312,7 @@
 <p>After clicking <em>Open</em>, you will receive a security warning. Select <em>Accept</em>.</p>
 <p><img alt="putty-security" src="../images/putty-security.png" /></p>
 <p>This warning should only appear the first time you load the <em>wca4z-ra</em> session.</p>
-<p>Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant.  In addition, a GitLab server will be started that will be used later in the <em>Transform</em> phase.  </p>
+<p>Scripts will automatically run in the PuTTY session to configure and start the Refactoring Assistant server.  In addition, a GitLab server will be started that will be used later in the <em>Transform</em> phase.  </p>
 </li>
 <li>
 <p>Once you receive the message <code>IBM watsonx Code Assistant for Z Refactoring Assistant started</code> in the PuTTY console, you can close PuTTY by clicking on the <strong>X</strong> icon in the upper-right corner of the PuTTY window and clicking <em>OK</em> on the <em>PuTTY Exit Confirmation</em> popup window.</p>
@@ -1506,7 +1506,7 @@ END-EXEC.
 This transformation is a three-step process.</p>
 <p>First, Java classes are created to implement a data model based on COBOL group items and SQL tables identified in the source code, and Java classes are created to implement the business logic.  The methods within the business logic implementation classes are provided as stubs- that is, they are empty. This step is performed by traditional programming logic- in other words, the generative AI model is not used in this step.</p>
 <p>In the second step, the empty business logic methods are created by the generative AI model.  The source COBOL paragraph is sent to the watsonx Code Assistant for Z service running in IBM Cloud, and this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.</p>
-<p>In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the functions it is expected to perform. </p>
+<p>In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the function it is expected to perform. </p>
 <h2 id="labs-transform-transform-the-refactored-service-code-from-cobol-to-java">Transform the Refactored Service Code from COBOL to JAVA<a class="headerlink" href="#labs-transform-transform-the-refactored-service-code-from-cobol-to-java" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
@@ -1726,7 +1726,7 @@ Now that you've inserted the Java code into the method, you can close the <em>Ja
 <li>problems that require a little bit of investigation by the Java developer but are within the knowledge domain of the Java developer</li>
 <li>problems that may require some knowledge of the original application and thus may require some collaboration with the COBOL application developer</li>
 </ul>
-<p><strong>Note:</strong> The LLM used by watsonx Code Assistant for Z is constantly improved and is updated frequently.  It is expected that the number of problems to resolve will decrease over time as the LLM improves- in fact, <strong>there is always the chance that recent model updates might cause the results that are returned during the lab to differ from what is documented here, in which case the instructions as shown here may not work correctly!  If this occurs, the instructors will tell the students during the lab what alterations to the lab instructions are necessary in order to resolve the problems. (Or they'll tell you to go home early if they can't figure it out.)</strong>.  The remainder of this section lists the problems that we expect you to have to contend with, subject to the previous disclaimer.</p>
+<p><strong>Note:</strong> The LLM used by watsonx Code Assistant for Z is constantly improved and is updated frequently.  It is expected that the number of problems to resolve will decrease over time as the LLM improves- in fact, <strong>there is always the chance that recent model updates might cause the results that are returned during the lab to differ from what is documented here, in which case the instructions as shown here may not work correctly!  If this occurs, the instructors will tell the students during the lab what alterations to the lab instructions are necessary in order to resolve the problems. (Or they'll tell you to go home early if they can't figure it out.)</strong>  The remainder of this section lists the problems that we expect you to have to contend with, subject to the previous disclaimer.</p>
 <ol>
 <li>
 <p>Select <em>View-&gt;Problems</em> from the VS Code menu to see a list of problems in the bottom portion of VS Code.    </p>
@@ -1741,24 +1741,25 @@ Now that you've inserted the Java code into the method, you can close the <em>Ja
 <li>
 <p>In the <em>WsWork.java</em> file, in the <em>getAvgMotPremium3100</em> method, change <code>connection</code> to <code>connection()</code>.  This is needed because the <em>JDBCConnection.java</em> class we are using does not provide a <em>connection</em> object, but rather a <em>connection</em> method.  This is an example of how a company-specific detail (e.g., using a company-mandated JDBC Connection class) might require a modification to the generated code.</p>
 <p><img alt="vscode-connection" src="../images/vscode-connection.png" /></p>
-<p>The red underline indicating an error should disappear.</p>
+<p>Although using the <em>connection()</em> method fixes one error, another one is generated, causing the red underline indicating an error to remain. The 
+<em>connection()</em> method throws a ClassNotFoundException, which is not handled by the try-catch block where our change was made. Hover 
+over the red underline, click <em>Quick Fix</em>, then click <em>Add catch clause to surrounding try</em>. The red underline indicating an error should disappear.
+<img alt="vscode-connection-2" src="../images/vscode-connection-2.png" /></p>
 </li>
 <li>
-<p>You may see a problem stating <em>The method validateCustomer310a() in the type WsWork is not applicable for the arguments (char)</em> in the list of problems for <em>WsWork.java</em>.  The instructors have received this problem sometimes but not always.  If you don't have this problem proceed to the next step, step 5.</p>
-<p><img alt="vscode-validatecustomer" src="../images/vscode-validateCustomer310a-problem.png" /></p>
-<p>The problem here is that when the LLM generated a method for <em>validateCustomer310a</em>, it gave it no arguments, but when it generated the method for <em>getAvgMotPremium3100</em>, it put an argument in the call to <em>validateCustomer310a</em>.   This is an example of a situation where the Java developer would have to decide what the proper course of action is to remediate this. Depending on the nature of the problem, the Java developer may be able to resolve the issue on their own without requiring knowledge of the original COBOL source from which the Java method is derived; on the other hand, they may need some help from the COBOL developer with application knowledge.</p>
-<p>For the purposes of this lab, choose the simplest action and remove the argument from the method call.  That is, change <em>validateCustomer310a(wsCustomerExists)</em> to <em>validateCustomer310a()</em> by choosing the "quick fix" <em>Remove argument to match 'validateCustomer310a()'</em>.</p>
-<p><img alt="vscode-fix-validatecustomer" src="../images/vscode-remove-arg-to-validateCustomer310a.png" /></p>
+<p>Go to method <em>validateCustomer310A</em> and repeat the previous step to fix <code>connection</code>.</p>
+<p><img alt="vscode-validatecustomerconnection" src="../images/vscode-validatecustomer-connection.png" /></p>
 </li>
 <li>
-<p>After you fix the previous problem, a new problem may appear in the <em>getAvgMotPremium3100</em> method- to fix this, hover the cursor to <em>JdbcConnection.connection()</em> underlined with red. Select <em>Quick fix</em> and then select <em>Add exception to existing catch clause</em>. </p>
-<p><img alt="vscode-connection-2" src="../images/vscode-connection-2.png" /></p>
+<p>The final critical errors are in method <em>calcReturnPremium4100()</em>. Inside <em>calcReturnPremium4100()</em>, the method <em>getWsAvgPremium()</em> is undefined for the class WsInRec. In
+    this case, <em>getWsAvgPremium()</em> is actually defined in class <em>WsWork</em> (the class being edited). In the two lines calling <em>getWsAvgPremium()</em>, change <code>wsInRec</code> to <code>this</code> to fix the errors.</p>
+<p><img alt="vscode-calcreturn-this" src="../images/vscode-calcreturn-this.png" /></p>
 </li>
 <li>
 <p>The problems identified in <em>Getmavg.java</em> should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph <em>1000-EXIT</em> was turned into an empty method except for a <em>TODO comment</em>, so you can remove the <em>TODO comment</em> from the code as well to remove this from the problem list.</p>
 </li>
 </ol>
-<p>You should no longer have problems in the <em>WsWork.java</em> or <em>Getmavg.java</em> files indicated by red numbers next to the filenames. You may have some <em>issues</em> or <em>warnings</em>, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the <em>Validate</em> phase.</p>
+<p>You should no longer have problems in the <em>WsWork.java</em> or <em>Getmavg.java</em> files indicated by red numbers next to the filenames. You may have some <em>warnings</em> or <em>TODOs</em>, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the <em>Validate</em> phase.</p>
 <p>In this <em>Transform</em> phase,</p>
 <ol>
 <li>We used the refactored service code <em>GETMAVG</em> from the <em>Refactor</em> phase.</li>
