@@ -1,9 +1,15 @@
 # Lab Assignments
 
 
-Each student has their own lab system.   Please ensure you use only your own system.  When you click on your unique *Lab system URL* you will be presented with a new browser tab and a sign-in screen.   Enter **Administrator** as the userid. The password will be either listed in the table below or distributed to you under separate cover.
+Each student has their own lab systems.   Please ensure you use only your own systems.  
 
-|Name| TechZone lab URL|Administrator password| zVA lab URL | Administrator password|
+The *TechZone lab URL* is used to access the **Code Explanation** section of the lab.  You will be prompted for a password-  this password will either be in the *Techzone lab access* column in the table, or it will be provided by the instructors by some other means.  You have been assigned a lab environment based on the email address you provided when registering for the class.  You must have an IBM ID associated with the email address.  If you do not have an IBM ID associated with this email address, you have two choices- 1) let the instructors know what email address is associated with your existing IBM ID and they will update the system, or 2) create an IBM ID with the email address you used to register for the class.  If you do not have and do not wish to create or cannot create an IBM ID, you can still do the other sections of the lab as instructed in the next paragraph.
+
+The remaining sections of the lab-  the **Understand**, **Refactor**, **Transform** and **Validate** phases- are performed on a *zVA* instance.  
+When you click on your unique *zVA lab URL* you will be presented with a new browser tab and a sign-in screen.   Enter **Administrator** as the userid. The password will be either listed in the table below in the *Administrator password* column or it will be distributed to you under separate cover.
+
+
+|Name| TechZone lab URL|Techzone lab password| zVA lab URL | Administrator password|
 |:--:|:-------------:|:--------------------:|:-:|:-:|
 |Alan B.|[http://ibm.biz/wscwca4z01e](http://ibm.biz/wscwca4z01e){target=_new}|`TBA`|[http://ibm.biz/wscwca4z01](http://ibm.biz/wscwca4z01){target=_new}|`TBA`|
 |Alice B.|[http://ibm.biz/wscwca4z02e](http://ibm.biz/wscwca4z02e){target=_new}|`TBA`|[http://ibm.biz/wscwca4z02](http://ibm.biz/wscwca4z02){target=_new}|`TBA`|
