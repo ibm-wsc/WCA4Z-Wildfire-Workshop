@@ -9,7 +9,7 @@
 
 ## Presentation
 
-* [Presentation](presentations/watsonx Code Assistant for Z Overview - WSC Workshop July 9 2024.pdf)
+* [Presentation](presentations/watsonx Code Assistant for Z Overview - WSC Workshop September 19 2024.pdf)
 
 ## Lab
 
