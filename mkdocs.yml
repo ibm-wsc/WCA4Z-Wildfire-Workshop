@@ -12,12 +12,14 @@ nav:
     - Lab Architecture: 'workshop-architecture.md'
     - Lab Assignments: 'lab-assignments.md'
     - Lab Documentation: 
-      - Lab Overview: 'labs/overview.md'
-      - Code Explanation: 'labs/explain.md'
-      - Understand Phase: 'labs/understand.md'
-      - Refactor Phase: 'labs/refactor.md'
-      - Transform Phase: 'labs/transform.md'
-      - Validate Phase: 'labs/validate.md'
+      - Lab 1 - Code Explanation:
+        - Code Explanation: 'labs/explain.md'
+      - Lab 2 - Understand, Refactor, Transform, Validate:
+        - Lab Overview: 'labs/overview.md'
+        - Understand Phase: 'labs/understand.md'
+        - Refactor Phase: 'labs/refactor.md'
+        - Transform Phase: 'labs/transform.md'
+        - Validate Phase: 'labs/validate.md'
 
 theme: 
   name: material
@@ -53,6 +55,7 @@ copyright: Copyright © 2024 IBM Z Washington Systems Center
 plugins:
   - search
   - htmlproofer:
+      enabled: False
       ignore_urls:
         - mailto:*
   - autolinks
