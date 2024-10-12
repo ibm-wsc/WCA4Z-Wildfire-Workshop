@@ -2,47 +2,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/lab-assignments/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/workshop-architecture/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/explain/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/overview/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/refactor/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/transform/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/understand/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ibm-wsc.github.io/WCA4Z-Wildfire-Workshop/labs/validate/</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-10-12</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

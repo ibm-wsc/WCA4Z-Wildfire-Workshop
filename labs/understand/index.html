@@ -831,12 +831,12 @@
 <h2 id="overview-of-the-understand-phase">Overview of the Understand phase<a class="headerlink" href="#overview-of-the-understand-phase" title="Permanent link">&para;</a></h2>
 <p>During the <em>Understand</em> phase an application architect uses <em>Application Discovery and Delivery Intelligence (ADDI)</em> to analyze an application, primarily through its source code, but also often through other artifacts.  The analysis performed by ADDI is stored in an <em>ADDI Project</em>, using a relational database schema.  The application architect uses the <em>ADDI Analyze Client</em> to create and view charts, graphs and reports in order to help gain a better understanding of the application and identify candidates for refactoring.</p>
 <p><strong>Note:</strong> Even if an enterprise already has a perfect understanding of their COBOL application, the <em>Understand</em> phase is a prerequisite for the <em>Refactor</em> phase, because the components used in the <em>Refactoring</em> phase read an ADDI project's database.</p>
-<p><strong>Note:</strong> ADDI is a powerful product, with a large number of features and reports.  This lab only scratches the surface of what can be done in ADDI with a realistic application. The <em>Understand</em> phase is a critical part of the <em>watsonx Code Assistant for Z</em> workflow, the importance of which is likely understated by the ADDI-related lab instructions- in real-world usage scenarios it is to your benefit to give proper weight to the <em>Understand</em> phase.</p>
+<p><strong>Note:</strong> ADDI is a powerful product, with a large number of features and reports.  This lab only scratches the surface of what can be done in ADDI with a realistic application. The <em>Understand</em> phase is a critical part of the <em>watsonx Code Assistant for Z</em> workflow, the importance of which is likely understated by this lab's ADDI-related instructions- in real-world usage scenarios it is to your benefit to learn more about ADDI's capabilities in order to give proper weight to the <em>Understand</em> phase.</p>
 <h2 id="initial-login-to-the-lab-environment">Initial login to the lab environment<a class="headerlink" href="#initial-login-to-the-lab-environment" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
 <p>Log in to your IBM Z Virtual Access (zVA) environment.  Your lab environment is a Windows system that you will access via your web browser.</p>
-<p>Your <a href="../../lab-assignments/" rel="noopener" target="_blank">access details for your environment are on this page</a>. If you are not sure how to access your environment, please ask your lab instructor for help.</p>
+<p>If you are taking this lab during an IBM Washington Systems Center-hosted workshop, then your <a href="../../lab-assignments/" rel="noopener" target="_blank">access details for your environment are on this page</a>. If you are not sure how to access your environment, please ask your lab instructor for help.</p>
 <p>The picture below shows what your browser tab or window should look like after you have successfully logged in to your zVA environment.</p>
 <p><img alt="zva-desktop" src="../../images/zva-desktop.png" /></p>
 <p><strong>Note:</strong> All lab instructions, unless explictly noted, are performed within your browser tab or window in which your zVA Windows environment is displayed. </p>
@@ -846,14 +846,15 @@
 <p>In this lab, you will be using the general insurance application, <strong>GenApp</strong>. GenApp is a sample CICS COBOL application that provides transactions that <em>could be</em> used by an insurance company to create and manage its customers and insurance policies.  <em>Could be</em> was italicized in the previous sentence as GenApp is provided primarily for educational and testing purposes- if you are an actual insurance company it is likely that market forces would encourage you to use transactions that are slightly more sophisticated than the ones in GenApp.</p>
 <p>You can read more about GenApp <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application" rel="noopener" target="_blank">here</a>.</p>
 <h2 id="explore-the-application-using-addi-and-ibm-developer-for-zos">Explore the application using ADDI and IBM Developer for z/OS<a class="headerlink" href="#explore-the-application-using-addi-and-ibm-developer-for-zos" title="Permanent link">&para;</a></h2>
+<p>In simple terms, ADDI consists of features to <em>build</em> an ADDI project that contains detailed application information, and features to <em>analyze</em> the ADDI project that you have built. For this lab, the <em>build</em> process has alredy been performed against the <em>GenApp</em> project, and you will start with the <em>analyze</em> process, which you will perform within the <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> product, using the <a href="https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective" rel_noopener_="rel&quot;noopener&quot;" target="_blank"><em>Application Discovery Browser Perspective</em></a>. </p>
 <ol>
 <li>
-<p>Open <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The <em>ADDI Analyze Client</em> functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. </p>
+<p>Open <em>IBM Developer for z/OS (IDz)</em> from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The <em>ADDI Analyze Client</em> functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. </p>
 <p><img alt="zva-desktop-idz" src="../../images/zva-desktop-idz.png" /></p>
 </li>
 <li>
 <p>After a short while you will probably see a "splash screen" for <em>IBM Developer for z/OS</em>. Then it will disappear and you may be prompted with the <em>Select a directory as workspace</em> popup window. If you receive this, leave the default workspace path unchanged and click <em>Launch</em>.</p>
-<p>The correct workspace path should be: </p>
+<p>The default workspace path on your lab system should be: </p>
 <div class="highlight"><pre><span></span><code>C:\Users\Administrator\.zosexplorer
 </code></pre></div>
 <p><img alt="idz-launch" src="../../images/idz-launch.png" /></p>
@@ -877,7 +878,7 @@
 <p>Please be patient. This can take a minute or two to fully load.</p>
 <p>When loaded, you will see a call graph for all programs, CICS transactions, tables, and other files in the GenApp application and the interdependencies between them.</p>
 <p><img alt="idz-callgraph-all" src="../../images/idz-callgraph-all.png" /></p>
-<p>This is an interactive chart. You can zoom in and scroll around the graph to see different objects. One way to zoom in is to click the <em>Interactive Zoom Tool</em> icon in the toolbar at the upper right of the chart.  Hover over the icons until you find the <em>Interactive Zoom Tool</em>.  Then click on the chart and very slowly drag your cursor in order to zoom in on the chart.  You can also right-click the objects to see more specific details about them.</p>
+<p>This is an interactive graph. You can zoom in and scroll around the graph to see different objects. One way to zoom in is to click the <em>Interactive Zoom Tool</em> icon in the toolbar at the upper right, above the graph.  Hover over the icons until you find the <em>Interactive Zoom Tool</em>, then click on it.  Then click on the graph and very slowly drag your cursor down in order to zoom in on the graph. You can zoom out on the graph by very slowly dragging your cursor up.  When you're satisfied with the readability of the objects, you can switch to the <em>Mouse Pan</em> tool, which is the icon that looks like a hand, and should be a couple icons to the left of the <em>Interactive Zoom Tool</em> icon. The <em>Mouse Pan Tool</em> is convenient for bringing different parts of the graph into view. You can also right-click the objects to see more specific details about them.</p>
 <p><strong>Note:</strong> Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the <em>x</em> icon on its tab and then repeat step 4 and this step.</p>
 </li>
 <li>
@@ -919,7 +920,7 @@
 <p><img alt="idz-3100" src="../../images/idz-3100.png" /></p>
 <p><strong>Hint:</strong> You can check the line you're on using the first number pointed out in the image above- this shows the location of the current cursor position so you may need to click inside the source code after you've scrolled.</p>
 <p>The <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph is one small part of the overall GenApp sample application. It is called when the request ID is <em>0AVMOT</em>.</p>
-<p>This paragraph calculates the average premiums for a customer's motor vehicle insurance policies.  The application architect decides that this would be a good service to refactor into a modular business service.</p>
+<p>This paragraph calculates the average premiums for a customer's motor vehicle insurance policies.  For this lab we are going to assume that the application architect has decided that this would be a good service to refactor into a modular business service.</p>
 <p>In the next section of the lab, you will refactor this paragraph into a separate COBOL service, and then in the section after that, you will transform this service into Java code.</p>
 <p>You will not be using IDz anymore in the lab instructions so you may either minimize it or exit from it altogether.</p>
 </li>

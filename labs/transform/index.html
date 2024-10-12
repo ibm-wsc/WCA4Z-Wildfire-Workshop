@@ -814,7 +814,7 @@
 <p>In the transform phase, refactored COBOL code is transformed to Java with the aid of generative AI.
 This transformation is a three-step process.</p>
 <p>First, Java classes are created to implement a data model based on COBOL group items and SQL tables identified in the source code, and Java classes are created to implement the business logic.  The methods within the business logic implementation classes are provided as stubs- that is, they are empty. This step is performed by traditional programming logic- in other words, the generative AI model is not used in this step.</p>
-<p>In the second step, the empty business logic methods are created by the generative AI model.  The source COBOL paragraph is sent to the watsonx Code Assistant for Z service running in IBM Cloud, and this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.</p>
+<p>In the second step, the business logic is created in Java by the gnerative AI model, and these results from the model are used to fill in the business logic methods that were created empty in the previous step.  This is done by sending the source COBOL paragraph to the watsonx Code Assistant for Z service running in IBM Cloud, where this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.</p>
 <p>In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the function it is expected to perform. </p>
 <h2 id="transform-the-refactored-service-code-from-cobol-to-java">Transform the Refactored Service Code from COBOL to JAVA<a class="headerlink" href="#transform-the-refactored-service-code-from-cobol-to-java" title="Permanent link">&para;</a></h2>
 <ol>
@@ -944,7 +944,7 @@ Done.
 <p>Navigate back to VS Code.</p>
 </li>
 <li>
-<p>Click the <em>Explorer</em> icon in the upper left, right-click the <em>GETMAVG.cbl</em> file, hover over <em>watsonx Code Assistant for Z</em>, and choose <em>Select COBOL for transformation</em>. </p>
+<p>Click the <em>Explorer</em> icon in the upper left, then, within the <em>refactor/cobol</em> folder, right-click the <em>GETMAVG.cbl</em>, hover over <em>watsonx Code Assistant for Z</em>, and choose <em>Select COBOL for transformation</em>. </p>
 <p><img alt="vscode-getmavg-refactor" src="../../images/vscode-getmavg-refactor.png" /> </p>
 <p>Note: the same task can be performed by selecting the <em>Import COBOL</em> button in the bottom-left corner of VS Code under the <em>IBM WATSONX CODE ASSISTANT FOR Z</em> section.</p>
 <p>Either way, the <em>GETMAVG.cbl</em> file should now be present in the <em>IBM WATSONX CODE ASSISTANT FOR Z</em> section in the bottom left of VS Code.</p>
@@ -1060,12 +1060,7 @@ over the red underline, click <em>Quick Fix</em>, then click <em>Add catch claus
 <p><img alt="vscode-validatecustomerconnection" src="../../images/vscode-validatecustomer-connection.png" /></p>
 </li>
 <li>
-<p>The final critical errors are in method <em>calcReturnPremium4100()</em>. Inside <em>calcReturnPremium4100()</em>, the method <em>getWsAvgPremium()</em> is undefined for the class WsInRec. In
-    this case, <em>getWsAvgPremium()</em> is actually defined in class <em>WsWork</em> (the class being edited). In the two lines calling <em>getWsAvgPremium()</em>, change <code>wsInRec</code> to <code>this</code> to fix the errors.</p>
-<p><img alt="vscode-calcreturn-this" src="../../images/vscode-calcreturn-this.png" /></p>
-</li>
-<li>
-<p>The problems identified in <em>Getmavg.java</em> should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph <em>1000-EXIT</em> was turned into an empty method except for a <em>TODO comment</em>, so you can remove the <em>TODO comment</em> from the code as well to remove this from the problem list.</p>
+<p>Any problems remaining in <em>Getmavg.java</em> or <em>WsWork.java</em> should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph <em>1000-EXIT</em> was turned into an empty method except for a <em>TODO comment</em>, so you can remove the <em>TODO comment</em> from the code as well to remove this from the problem list. Similarly, the <em>catch</em> clauses you added to fix the problems from the <em>JdbcConnection.connection()</em> method may each have a <em>TODO comment</em>, so you can remove these as well. </p>
 </li>
 </ol>
 <p>You should no longer have problems in the <em>WsWork.java</em> or <em>Getmavg.java</em> files indicated by red numbers next to the filenames. You may have some <em>warnings</em> or <em>TODOs</em>, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the <em>Validate</em> phase.</p>
