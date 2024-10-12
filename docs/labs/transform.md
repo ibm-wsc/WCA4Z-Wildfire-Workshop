@@ -7,7 +7,7 @@ This transformation is a three-step process.
 
 First, Java classes are created to implement a data model based on COBOL group items and SQL tables identified in the source code, and Java classes are created to implement the business logic.  The methods within the business logic implementation classes are provided as stubs- that is, they are empty. This step is performed by traditional programming logic- in other words, the generative AI model is not used in this step.
 
-In the second step, the empty business logic methods are created by the generative AI model.  The source COBOL paragraph is sent to the watsonx Code Assistant for Z service running in IBM Cloud, and this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.
+In the second step, the business logic is created in Java by the gnerative AI model, and these results from the model are used to fill in the business logic methods that were created empty in the previous step.  This is done by sending the source COBOL paragraph to the watsonx Code Assistant for Z service running in IBM Cloud, where this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.
 
 In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the function it is expected to perform. 
 
@@ -150,7 +150,8 @@ In the third step, the Java developer, with help from the COBOL developer if nec
     - This triggered the Jenkins pipeline which executed a series of steps.  The purpose of these steps was to inspect the code changes, incorporate them into an ADDI project associated with your source code repository, create metadata information that will be used for transforming the COBOL code to Java, and writing this metadata information to the IBM Cloud Db2 service that the watsonx Code Assistant for Z service uses.
 
 23. Navigate back to VS Code.
-24. Click the *Explorer* icon in the upper left, right-click the *GETMAVG.cbl* file, hover over *watsonx Code Assistant for Z*, and choose *Select COBOL for transformation*. 
+
+24. Click the *Explorer* icon in the upper left, then, within the *refactor/cobol* folder, right-click the *GETMAVG.cbl*, hover over *watsonx Code Assistant for Z*, and choose *Select COBOL for transformation*. 
 
     ![vscode-getmavg-refactor](../images/vscode-getmavg-refactor.png) 
 
@@ -289,12 +290,7 @@ It is anticipated that the code returned from the LLM will not be perfect and re
 
     ![vscode-validatecustomerconnection](../images/vscode-validatecustomer-connection.png)
 
-40. The final critical errors are in method *calcReturnPremium4100()*. Inside *calcReturnPremium4100()*, the method *getWsAvgPremium()* is undefined for the class WsInRec. In
-    this case, *getWsAvgPremium()* is actually defined in class *WsWork* (the class being edited). In the two lines calling *getWsAvgPremium()*, change `wsInRec` to `this` to fix the errors.
-
-    ![vscode-calcreturn-this](../images/vscode-calcreturn-this.png)
-
-41. The problems identified in *Getmavg.java* should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph *1000-EXIT* was turned into an empty method except for a *TODO comment*, so you can remove the *TODO comment* from the code as well to remove this from the problem list.
+41. Any problems remaining in *Getmavg.java* or *WsWork.java* should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph *1000-EXIT* was turned into an empty method except for a *TODO comment*, so you can remove the *TODO comment* from the code as well to remove this from the problem list. Similarly, the *catch* clauses you added to fix the problems from the *JdbcConnection.connection()* method may each have a *TODO comment*, so you can remove these as well. 
 
 You should no longer have problems in the *WsWork.java* or *Getmavg.java* files indicated by red numbers next to the filenames. You may have some *warnings* or *TODOs*, but these can be ignored. All problems with the transformed Java code should be fixed, and it should be compilable now, which is a preqrequisite for the next phase, which is the *Validate* phase.
 

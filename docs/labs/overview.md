@@ -1,6 +1,6 @@
 # Lab Overview
 
-In this lab you will explore four of the phases in the *IBM watsonx Code Assistant for Z* workflow, and you will explore *Code Explanation* which is a feature used in more than one phase.   The lab is performed on instructor-provided instances that you access through your web browser.  You do not need any additional software on your personal laptop or workstation other than a modern browser. You will need an IBM ID to do the *Code Explanation* section of the lab, but you don't need one for the rest of the lab.
+In this lab you will explore four of the phases in the *IBM watsonx Code Assistant for Z* workflow.  The lab is performed on instructor-provided instances that you access through your web browser.  You do not need any additional software on your personal laptop or workstation other than a modern web browser. 
 
 The phases you will explore are:
 

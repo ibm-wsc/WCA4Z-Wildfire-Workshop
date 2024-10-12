@@ -6,13 +6,13 @@ During the *Understand* phase an application architect uses *Application Discove
 
 **Note:** Even if an enterprise already has a perfect understanding of their COBOL application, the *Understand* phase is a prerequisite for the *Refactor* phase, because the components used in the *Refactoring* phase read an ADDI project's database.
 
-**Note:** ADDI is a powerful product, with a large number of features and reports.  This lab only scratches the surface of what can be done in ADDI with a realistic application. The *Understand* phase is a critical part of the *watsonx Code Assistant for Z* workflow, the importance of which is likely understated by the ADDI-related lab instructions- in real-world usage scenarios it is to your benefit to give proper weight to the *Understand* phase.
+**Note:** ADDI is a powerful product, with a large number of features and reports.  This lab only scratches the surface of what can be done in ADDI with a realistic application. The *Understand* phase is a critical part of the *watsonx Code Assistant for Z* workflow, the importance of which is likely understated by this lab's ADDI-related instructions- in real-world usage scenarios it is to your benefit to learn more about ADDI's capabilities in order to give proper weight to the *Understand* phase.
 
 ## Initial login to the lab environment
 
 1. Log in to your IBM Z Virtual Access (zVA) environment.  Your lab environment is a Windows system that you will access via your web browser.
     
-    Your [access details for your environment are on this page](../lab-assignments.md){target="_blank" rel="noopener"}. If you are not sure how to access your environment, please ask your lab instructor for help.
+    If you are taking this lab during an IBM Washington Systems Center-hosted workshop, then your [access details for your environment are on this page](../lab-assignments.md){target="_blank" rel="noopener"}. If you are not sure how to access your environment, please ask your lab instructor for help.
 
     The picture below shows what your browser tab or window should look like after you have successfully logged in to your zVA environment.
 
@@ -27,13 +27,15 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
 ## Explore the application using ADDI and IBM Developer for z/OS
 
-6. Open [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The *ADDI Analyze Client* functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. 
+In simple terms, ADDI consists of features to *build* an ADDI project that contains detailed application information, and features to *analyze* the ADDI project that you have built. For this lab, the *build* process has alredy been performed against the *GenApp* project, and you will start with the *analyze* process, which you will perform within the [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} product, using the [*Application Discovery Browser Perspective*](https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective){target="_blank" rel"noopener"}. 
+
+6. Open *IBM Developer for z/OS (IDz)* from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The *ADDI Analyze Client* functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. 
 
     ![zva-desktop-idz](../images/zva-desktop-idz.png)
 
 7. After a short while you will probably see a "splash screen" for *IBM Developer for z/OS*. Then it will disappear and you may be prompted with the *Select a directory as workspace* popup window. If you receive this, leave the default workspace path unchanged and click *Launch*.
 
-    The correct workspace path should be: 
+    The default workspace path on your lab system should be: 
 
     ```
     C:\Users\Administrator\.zosexplorer
@@ -71,7 +73,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
     ![idz-callgraph-all](../images/idz-callgraph-all.png)
 
-    This is an interactive chart. You can zoom in and scroll around the graph to see different objects. One way to zoom in is to click the *Interactive Zoom Tool* icon in the toolbar at the upper right of the chart.  Hover over the icons until you find the *Interactive Zoom Tool*.  Then click on the chart and very slowly drag your cursor in order to zoom in on the chart.  You can also right-click the objects to see more specific details about them.
+    This is an interactive graph. You can zoom in and scroll around the graph to see different objects. One way to zoom in is to click the *Interactive Zoom Tool* icon in the toolbar at the upper right, above the graph.  Hover over the icons until you find the *Interactive Zoom Tool*, then click on it.  Then click on the graph and very slowly drag your cursor down in order to zoom in on the graph. You can zoom out on the graph by very slowly dragging your cursor up.  When you're satisfied with the readability of the objects, you can switch to the *Mouse Pan* tool, which is the icon that looks like a hand, and should be a couple icons to the left of the *Interactive Zoom Tool* icon. The *Mouse Pan Tool* is convenient for bringing different parts of the graph into view. You can also right-click the objects to see more specific details about them.
 
     **Note:** Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the *x* icon on its tab and then repeat step 4 and this step.
 
@@ -122,7 +124,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
     The *3100-GET-AVG-MOT-PREMIUM* paragraph is one small part of the overall GenApp sample application. It is called when the request ID is *0AVMOT*.
 
-    This paragraph calculates the average premiums for a customer's motor vehicle insurance policies.  The application architect decides that this would be a good service to refactor into a modular business service.
+    This paragraph calculates the average premiums for a customer's motor vehicle insurance policies.  For this lab we are going to assume that the application architect has decided that this would be a good service to refactor into a modular business service.
 
     In the next section of the lab, you will refactor this paragraph into a separate COBOL service, and then in the section after that, you will transform this service into Java code.
 

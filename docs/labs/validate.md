@@ -33,7 +33,7 @@ In the lab you will perform all of these steps in one sitting.  In the real worl
     - Username: `ibmuser`
     - Password: `sys1`
 
-2. In the *DATA SETS* section, expand the both the *Favorites* and *zos.dev* folders.
+2. In the *DATA SETS* section, expand both the *Favorites* and *zos.dev* folders.
 
     ![vscode-zosdev](../images/vscode-zosdev.png)
 
@@ -41,14 +41,14 @@ In the lab you will perform all of these steps in one sitting.  In the real worl
 
     ![vscode-zosdev](../images/vscode-zosdev-search.png)
 
-    You will need to hover over the *zos.dev* bar for the search icon to appear.
+    You may need to hover over the *zos.dev* bar for the search icon to appear.
 
 5. **Note:** You may be prompted first for a username, and then for a password. If not, proceed to the next step.  If you are, enter the following credentials.
 
     - Username: `ibmuser`
     - Password: `sys1`
 
-6. You will be prompted to enter a dataset filter. Enter `ibmuser.wca4z.**` in the bar at the top of the page and press *Enter*.
+6. You will be prompted to enter a dataset filter. Enter `ibmuser.wca4z.**` (it may be presented to you as a choice in the dropdown list) in the bar at the top of the page and press *Enter*.
 
     ![vscode-zosdev](../images/vscode-zosdev-filter.png)
 

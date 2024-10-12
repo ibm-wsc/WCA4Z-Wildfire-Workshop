@@ -32,7 +32,7 @@ In addition to the *Refactoring Assistant* VS Code extension that you'll be usin
 
 The *Refactor* phase and the remaining phases in the lab (*Transform* and *Validate*) use VS Code.
 
-3. Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the *watsonx Code Assistant for Z* service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named *wca4z-key.txt* on the Windows Desktop. 
+3. Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the *watsonx Code Assistant for Z* service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named *wca4z-key.txt* on the Windows Desktop.
    
     ![zva-desktop-apikey](../images/zva-desktop-apikey.png)
 
