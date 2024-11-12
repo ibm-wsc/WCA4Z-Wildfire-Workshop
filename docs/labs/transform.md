@@ -319,7 +319,7 @@ It is anticipated that the code returned from the LLM will not be perfect and re
     }
     ```
 
-    This handles non-zero SQL codes by setting `wsStatuCode` to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)
+    This handles non-zero SQL codes by setting `wsStatusCode` to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)
 
     Since a SQL code of zero does not cause a SQLException, we can set `wsStatusCode` to *00* prior to making the SQL call.  Add `this.setWsStatusCode("00")` at the top of the *try* clause in *getAvgMotPremium3100()*, prior to making the SQL call.  See the code snippet below for where it belongs:
 
