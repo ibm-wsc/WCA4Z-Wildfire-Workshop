@@ -13,7 +13,7 @@ nav:
     - Lab Assignments: 'lab-assignments.md'
     - Lab Documentation: 
       - Lab 1 - Code Explanation:
-        - Code Explanation: 'labs/explain.md'
+        - Code Explanation: 'labs/explanation.md'
       - Lab 2 - Understand, Refactor, Transform, Validate:
         - Lab Overview: 'labs/overview.md'
         - Understand Phase: 'labs/understand.md'
