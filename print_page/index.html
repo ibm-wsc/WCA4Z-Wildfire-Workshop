@@ -1842,7 +1842,7 @@ to</p>
   return;
 }
 </code></pre></div>
-<p>This handles non-zero SQL codes by setting <code>wsStatuCode</code> to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)</p>
+<p>This handles non-zero SQL codes by setting <code>wsStatusCode</code> to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)</p>
 <p>Since a SQL code of zero does not cause a SQLException, we can set <code>wsStatusCode</code> to <em>00</em> prior to making the SQL call.  Add <code>this.setWsStatusCode("00")</code> at the top of the <em>try</em> clause in <em>getAvgMotPremium3100()</em>, prior to making the SQL call.  See the code snippet below for where it belongs:</p>
 <div class="highlight"><pre><span></span><code>...
   if (this.getWsCustomerExists() == &#39;Y&#39;) {
