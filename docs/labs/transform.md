@@ -281,12 +281,120 @@ It is anticipated that the code returned from the LLM will not be perfect and re
 
     ![vscode-connection](../images/vscode-connection.png)
 
-    Although using the *connection()* method fixes one error, another one is generated, causing the red underline indicating an error to remain. The 
+
+
+
+
+40. You may still have errors in *getAvtMotPremium3100()* stating that `sqlcode cannot be resolved to a variable`, similar to what is shown in the screen snippet below.  If you do, read the instructions below the screen snippet for advice on how to remediate this.
+
+    ![vscode-sqlcode-unresolved](../images/vscode-sqlcode-unresolved.png)
+    
+    This `sqlcode` Java variable originated from the COBOL variable `SQLCODE` which is defined in the `SQLCA` group data item. This variable holds the result of a SQL call.  In Java, a non-zero SQL code can be retrieved from the *getErrorCode()* method of the *SQLException* class.  Thus, one way to resolve this unreferenced variable is to move the handling of it into the *catch* clause that handles a *SQLException*.   Right now, the *sqlCode* variable is being checked after the *try/catch* statement.  We think we can improve upon the model's output here. Remember, *watsonx Code Assistant for Z* is an *assistant*- you are the boss, and you can overrule your assistant.
+
+    The following set of instructions will provide guidance to help you to move the `sqlcode` variable to the *catch* clause, where it belongs, improving the code and resolving the problem.  To perform these steps you may have to do some typing, some cutting and pasting, and some deletions. This is probably the most difficult step in the lab- take care when performing this step, but, to be safe, we've included the complete source code for the *getAvgMotPremium3100()* at the end of this step for your reference.
+
+    Change the catch clause of the SQLException from
+
+    ```
+    } catch (SQLException exception) {
+            this.setWsStatusCode("02");
+            endPara9000();
+            return;
+        }
+
+    ```
+    to
+
+    ```
+    } catch (SQLException exception) {
+      int sqlCode = exception.getErrorCode();
+      System.out.println("SQLCODE:" + sqlCode);
+      if (sqlCode == 100) {
+        this.setWsStatusCode("02");
+      } else {
+        this.setWsStatusCode("16");
+      }
+      endPara9000();
+      return;
+    }
+    ```
+
+    This handles non-zero SQL codes by setting `wsStatuCode` to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)
+
+    Since a SQL code of zero does not cause a SQLException, we can set `wsStatusCode` to *00* prior to making the SQL call.  Add `this.setWsStatusCode("00")` at the top of the *try* clause in *getAvgMotPremium3100()*, prior to making the SQL call.  See the code snippet below for where it belongs:
+
+    ```
+    ...
+      if (this.getWsCustomerExists() == 'Y') {
+    try {
+      this.setWsStatusCode("00");    // Insert this line at top of the 'try'
+      ResultSet rs = JdbcConnection.connection().createStatement().executeQuery(
+    ...
+
+    ```
+
+    Now you can get rid of the code shown below, just after the try/catch clause, because you set `wsStatusCode` to *00* prior to the SQL call, and you are relying on the *catch* clause to change *wsStatusCode* appropriately if a *SQLException* occurs:
+
+    ```
+            System.out.println("SQLCODE:" + sqlCode);
+        if (sqlCode == 0) {
+            this.setWsStatusCode("00");
+        } else if (sqlCode == 100) {
+            this.setWsStatusCode("02");
+            endPara9000();
+            return;
+        } else {
+            this.setWsStatusCode("16");
+            endPara9000();
+            return;
+        }
+    ```
+
+39. You will probably still have a red underline indicating that another error remains. The 
     *connection()* method throws a ClassNotFoundException, which is not handled by the try-catch block where our change was made. Hover 
     over the red underline, click *Quick Fix*, then click *Add catch clause to surrounding try*. The red underline indicating an error should disappear.
+
     ![vscode-connection-2](../images/vscode-connection-2.png)
 
-39. Go to method *validateCustomer310A* and repeat the previous step to fix `connection`.
+    That was a lot of code changes in *getAvgMotPremium3100()*, so, for your reference, this method should now look like the code shown here:
+
+    ```
+    public void getAvgMotPremium3100() {
+      this.setWsCustomerExists('Y');
+      validateCustomer310A();
+      if (this.getWsCustomerExists() == 'Y') {
+        try {
+          this.setWsStatusCode("00");
+          ResultSet rs = JdbcConnection.connection().createStatement().executeQuery(
+          "SELECT AVG(MOT.PREMIUM) FROM CUSTOMER CUST INNER JOIN POLICY POL ON POL.CUSTOMERNUMBER = CUST.CUSTOMERNUMBER INNER JOIN MOTOR MOT   ON POL.POLICYNUMBER = MOT.POLICYNUMBER WHERE POL.CUSTOMERNUMBER = "
+              + this.getWsCustomerNumber());
+          rs.next();
+          this.setWsAvgPremium(rs.getInt(1));
+        } catch (SQLException exception) {
+            int sqlCode = exception.getErrorCode();
+            System.out.println("SQLCODE:" + sqlCode);
+            if (sqlCode == 100) {
+              this.setWsStatusCode("02");
+            } else {
+               this.setWsStatusCode("16");
+            }
+            endPara9000();
+            return;
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            System.out.println(e.printStackTrace());
+        }
+      } else {
+        this.setWsStatusCode("08");
+        System.out.println("INVALID CUSTOMER!!!");
+        endPara9000();
+        return;
+      }
+    checkIfOverpaid4000();
+    }
+    ```
+ 
+39. Go to method *validateCustomer310A* and repeat the previous steps to fix `connection`-  change `connection` to `connection()` and then use Quick Fix *add catch clause to surrounding try* when the unhandled *ClassNotFoundException* message occurs after changing `connection` to `connection()`.
 
     ![vscode-validatecustomerconnection](../images/vscode-validatecustomer-connection.png)
 
