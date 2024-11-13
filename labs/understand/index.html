@@ -846,7 +846,7 @@
 <p>In this lab, you will be using the general insurance application, <strong>GenApp</strong>. GenApp is a sample CICS COBOL application that provides transactions that <em>could be</em> used by an insurance company to create and manage its customers and insurance policies.  <em>Could be</em> was italicized in the previous sentence as GenApp is provided primarily for educational and testing purposes- if you are an actual insurance company it is likely that market forces would encourage you to use transactions that are slightly more sophisticated than the ones in GenApp.</p>
 <p>You can read more about GenApp <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application" rel="noopener" target="_blank">here</a>.</p>
 <h2 id="explore-the-application-using-addi-and-ibm-developer-for-zos">Explore the application using ADDI and IBM Developer for z/OS<a class="headerlink" href="#explore-the-application-using-addi-and-ibm-developer-for-zos" title="Permanent link">&para;</a></h2>
-<p>In simple terms, ADDI consists of features to <em>build</em> an ADDI project that contains detailed application information, and features to <em>analyze</em> the ADDI project that you have built. For this lab, the <em>build</em> process has alredy been performed against the <em>GenApp</em> project, and you will start with the <em>analyze</em> process, which you will perform within the <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> product, using the <a href="https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective" rel_noopener_="rel&quot;noopener&quot;" target="_blank"><em>Application Discovery Browser Perspective</em></a>. </p>
+<p>In simple terms, ADDI consists of features to <em>build</em> an ADDI project that contains detailed application information, and features to <em>analyze</em> the ADDI project that you have built. For this lab, the <em>build</em> process has already been performed against the <em>GenApp</em> project, and you will start with the <em>analyze</em> process, which you will perform within the <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> product, using the <a href="https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective" rel_noopener_="rel&quot;noopener&quot;" target="_blank"><em>Application Discovery Browser Perspective</em></a>. </p>
 <ol>
 <li>
 <p>Open <em>IBM Developer for z/OS (IDz)</em> from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The <em>ADDI Analyze Client</em> functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. </p>
@@ -882,7 +882,7 @@
 <p><strong>Note:</strong> Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the <em>x</em> icon on its tab and then repeat step 4 and this step.</p>
 </li>
 <li>
-<p>In the left-side of the page, you will see a <em>Graph Inventory</em>. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the <em>COBOL Programs</em> section to see the list of COBOL programs that are part of GenApp.</p>
+<p>In the left side of the page, you will see a <em>Graph Inventory</em>. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the <em>COBOL Programs</em> section to see the list of COBOL programs that are part of GenApp.</p>
 <p><img alt="idz-inventory-cobol" src="../../images/idz-inventory-cobol.png" /></p>
 </li>
 <li>
@@ -916,7 +916,7 @@
 <p>For the purposes of this lab, let's assume that the application architect has identified the paragraph that implements the <em>Get Average Premium</em> functionality as a good candidate for refactoring.  (This is why we've highlighted <em>Get Average Premium</em> in the above list.)</p>
 </li>
 <li>
-<p>Scroll down to line 342 in the COBOL code until you find the <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph. </p>
+<p>Scroll down to line 342 in the COBOL code until you find the <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph.  <strong>Pro tip:</strong> You may find that using <em>Navigate</em>-&gt;<em>Go to line...</em> from the IDz menu is a more enjoyable experience than scrolling.  </p>
 <p><img alt="idz-3100" src="../../images/idz-3100.png" /></p>
 <p><strong>Hint:</strong> You can check the line you're on using the first number pointed out in the image above- this shows the location of the current cursor position so you may need to click inside the source code after you've scrolled.</p>
 <p>The <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph is one small part of the overall GenApp sample application. It is called when the request ID is <em>0AVMOT</em>.</p>

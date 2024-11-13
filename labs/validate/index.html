@@ -982,20 +982,20 @@
 <p><img alt="vscode-zosdev-logs" src="../../images/vscode-zosdev-logs.png" /></p>
 </li>
 <li>
-<p>In the <em>COBOL/GETMAVG</em> folder, rename <code>sysprint.txt</code> to <code>getmavg.log</code>.</p>
+<p>In the <em>COBOL/GETMAVG</em> folder, right-click <code>sysprint.txt</code> and select <em>Rename...</em> and then rename the file to <code>getmavg.log</code>.</p>
 <p><img alt="vscode-getmavg-log" src="../../images/vscode-getmavg-log.png" /></p>
 </li>
 </ol>
 <h3 id="generate-cobol-values">Generate COBOL values<a class="headerlink" href="#generate-cobol-values" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Right-click <em>getmavg.log</em>, hover over <em>watsonx code assistant for Z Validation Assistant</em>, and then select <em>Generate cobol values for testing</em>.</p>
+<p>Right-click <em>getmavg.log</em>, hover over <em>watsonx Code Assistant for Z Validation Assistant</em>, and then select <em>Generate COBOL Values for Testing</em>.</p>
 <p><img alt="vscode-cobol-values" src="../../images/vscode-cobol-values.png" /></p>
 </li>
 <li>
-<p>You will be prompted to select a <em>Load library</em>. Enter or select <em>IBMUSER.WCA4Z.LOAD</em> and press enter. </p>
+<p>You will be prompted to select a <em>Load library</em> at the top middle of VS Code.  Enter or select <em>IBMUSER.WCA4Z.LOAD</em> and press enter. </p>
 <p><img alt="vscode-load" src="../../images/vscode-load.png" /></p>
-<p>This step was successful if you see the message <em>Completed generating cobol values for testing</em> at the bottom of your <em>Output</em> window.</p>
+<p>This step was successful if you see the message <em>Completed generating cobol values for testing</em> at the bottom of your <em>Terminal</em> window.</p>
 <p><img alt="vscode-cobol-values-2" src="../../images/vscode-cobol-values-2.png" /></p>
 </li>
 </ol>
@@ -1010,7 +1010,7 @@
 <p><img alt="vscode-run-equivalence" src="../../images/vscode-run-equivalence.png" /></p>
 <p>Wait until you see the message <em>Equivalency Tests Complete</em>. </p>
 <p><strong>Note:</strong> You may see an error message popup in the lower right that says <em>Failed to perform operation: SyntaxError: Expected double-quoted property name in JSON at position 188 (line 4 column 5)</em>.  You may ignore this message- it is due to a syntax error in a settings file provided in the lab environment.</p>
-<p>In the <em>IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT</em> pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.   Ask an instructor for help if your test didn't pass.</p>
+<p>In the <em>IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT</em> pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.  This pane is on the left, probably underneath the <em>TIMELINE</em> pane, and you will probably have to expand the pane in order to see these test results.   Ask an instructor for help if your test didn't pass.</p>
 </li>
 <li>
 <p>Repeat steps 1 and 2 for Java methods <em>checkIfOverpaid4000</em> and <em>MainPara1000</em>. </p>

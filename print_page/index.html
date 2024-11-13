@@ -1316,7 +1316,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 <p>In this lab, you will be using the general insurance application, <strong>GenApp</strong>. GenApp is a sample CICS COBOL application that provides transactions that <em>could be</em> used by an insurance company to create and manage its customers and insurance policies.  <em>Could be</em> was italicized in the previous sentence as GenApp is provided primarily for educational and testing purposes- if you are an actual insurance company it is likely that market forces would encourage you to use transactions that are slightly more sophisticated than the ones in GenApp.</p>
 <p>You can read more about GenApp <a href="https://www.ibm.com/docs/en/cics-ts/6.1?topic=samples-general-insurance-application" rel="noopener" target="_blank">here</a>.</p>
 <h2 id="labs-understand-explore-the-application-using-addi-and-ibm-developer-for-zos">Explore the application using ADDI and IBM Developer for z/OS<a class="headerlink" href="#labs-understand-explore-the-application-using-addi-and-ibm-developer-for-zos" title="Permanent link">&para;</a></h2>
-<p>In simple terms, ADDI consists of features to <em>build</em> an ADDI project that contains detailed application information, and features to <em>analyze</em> the ADDI project that you have built. For this lab, the <em>build</em> process has alredy been performed against the <em>GenApp</em> project, and you will start with the <em>analyze</em> process, which you will perform within the <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> product, using the <a href="https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective" rel_noopener_="rel&quot;noopener&quot;" target="_blank"><em>Application Discovery Browser Perspective</em></a>. </p>
+<p>In simple terms, ADDI consists of features to <em>build</em> an ADDI project that contains detailed application information, and features to <em>analyze</em> the ADDI project that you have built. For this lab, the <em>build</em> process has already been performed against the <em>GenApp</em> project, and you will start with the <em>analyze</em> process, which you will perform within the <a href="https://www.ibm.com/products/developer-for-zos" rel="noopener" target="_blank"><em>IBM Developer for z/OS (IDz)</em></a> product, using the <a href="https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective" rel_noopener_="rel&quot;noopener&quot;" target="_blank"><em>Application Discovery Browser Perspective</em></a>. </p>
 <ol>
 <li>
 <p>Open <em>IBM Developer for z/OS (IDz)</em> from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The <em>ADDI Analyze Client</em> functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. </p>
@@ -1352,7 +1352,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 <p><strong>Note:</strong> Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the <em>x</em> icon on its tab and then repeat step 4 and this step.</p>
 </li>
 <li>
-<p>In the left-side of the page, you will see a <em>Graph Inventory</em>. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the <em>COBOL Programs</em> section to see the list of COBOL programs that are part of GenApp.</p>
+<p>In the left side of the page, you will see a <em>Graph Inventory</em>. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the <em>COBOL Programs</em> section to see the list of COBOL programs that are part of GenApp.</p>
 <p><img alt="idz-inventory-cobol" src="../images/idz-inventory-cobol.png" /></p>
 </li>
 <li>
@@ -1386,7 +1386,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 <p>For the purposes of this lab, let's assume that the application architect has identified the paragraph that implements the <em>Get Average Premium</em> functionality as a good candidate for refactoring.  (This is why we've highlighted <em>Get Average Premium</em> in the above list.)</p>
 </li>
 <li>
-<p>Scroll down to line 342 in the COBOL code until you find the <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph. </p>
+<p>Scroll down to line 342 in the COBOL code until you find the <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph.  <strong>Pro tip:</strong> You may find that using <em>Navigate</em>-&gt;<em>Go to line...</em> from the IDz menu is a more enjoyable experience than scrolling.  </p>
 <p><img alt="idz-3100" src="../images/idz-3100.png" /></p>
 <p><strong>Hint:</strong> You can check the line you're on using the first number pointed out in the image above- this shows the location of the current cursor position so you may need to click inside the source code after you've scrolled.</p>
 <p>The <em>3100-GET-AVG-MOT-PREMIUM</em> paragraph is one small part of the overall GenApp sample application. It is called when the request ID is <em>0AVMOT</em>.</p>
@@ -1428,7 +1428,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 <p>The <em>Refactor</em> phase and the remaining phases in the lab (<em>Transform</em> and <em>Validate</em>) use VS Code.</p>
 <ol>
 <li>
-<p>Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the <em>watsonx Code Assistant for Z</em> service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named <em>wca4z-key.txt</em> on the Windows Desktop.</p>
+<p>Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the <em>watsonx Code Assistant for Z</em> service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named <em>wca4z-key.txt</em> on the Windows Desktop by double-clicking its icon.</p>
 <p><img alt="zva-desktop-apikey" src="../images/zva-desktop-apikey.png" /></p>
 </li>
 <li>
@@ -1436,7 +1436,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 <p><img alt="notepad-apikey" src="../images/notepad-apikey.png" /></p>
 </li>
 <li>
-<p>Open <em>Visual Studio Code</em> (VS Code) by double-clicking its desktop shortcut.</p>
+<p>Open <em>Visual Studio Code</em> (VS Code) by double-clicking its desktop shortcut.  (You may need to move or close the window containing your API key in order to see the desktop shortcut.)</p>
 <p><img alt="zva-desktop-vscode" src="../images/zva-desktop-vscode.png" /></p>
 </li>
 <li>
@@ -1501,7 +1501,7 @@ When you click on your unique <em>zVA lab URL</em> you will be presented with a 
 </li>
 <li>
 <p>Provide a service name of <code>refactor</code> and press enter.</p>
-<p><strong>Important</strong>: This environment is configured such that you must provide the name <code>refactor</code> in this step, exactly as shown.  The reason for this is that a Jenkins pipeline that is triggered when you do a Git commit later expects to find artifacts in a folder of the name <code>refactor</code>, and what you enter in this step will be the name of the folder in which these artifacts are stored.</p>
+<p><strong>Important</strong>: This environment is configured such that you must provide the name <code>refactor</code> in this step, exactly as shown.  The reason for this is that a Jenkins pipeline that is triggered when you do a Git commit later expects to find artifacts in a folder of the name <code>refactor</code>, and what you enter in this step will be the name of the folder in which these artifacts are stored. This restriction is just a quirk based on how this particular lab environment was built, and is not a restriction of the <em>watsonx Code Assistant for Z</em> product.</p>
 <p><img alt="vscode-getaavg-0AVMOT-slice-refactor" src="../images/vscode-getaavg-0AVMOT-slice-refactor.png" /></p>
 </li>
 <li>
@@ -1612,7 +1612,8 @@ This transformation is a three-step process.</p>
 <p>First, Java classes are created to implement a data model based on COBOL group items and SQL tables identified in the source code, and Java classes are created to implement the business logic.  The methods within the business logic implementation classes are provided as stubs- that is, they are empty. This step is performed by traditional programming logic- in other words, the generative AI model is not used in this step.</p>
 <p>In the second step, the business logic is created in Java by the gnerative AI model, and these results from the model are used to fill in the business logic methods that were created empty in the previous step.  This is done by sending the source COBOL paragraph to the watsonx Code Assistant for Z service running in IBM Cloud, where this paragraph is combined with program metadata information stored in an IBM Db2 service on IBM Cloud, to form the prompt to the generative AI model.   The AI model returns Java code based on this prompt.</p>
 <p>In the third step, the Java developer, with help from the COBOL developer if necessary, makes any necessary changes to the returned Java code to ensure that it is compilable and that it performs the function it is expected to perform. </p>
-<h2 id="labs-transform-transform-the-refactored-service-code-from-cobol-to-java">Transform the Refactored Service Code from COBOL to JAVA<a class="headerlink" href="#labs-transform-transform-the-refactored-service-code-from-cobol-to-java" title="Permanent link">&para;</a></h2>
+<h2 id="labs-transform-open-gitlab-and-jenkins-tabs-in-firefox">Open Gitlab and Jenkins tabs in Firefox<a class="headerlink" href="#labs-transform-open-gitlab-and-jenkins-tabs-in-firefox" title="Permanent link">&para;</a></h2>
+<p>Before we start the transformation process in VS Code, you are going to open two tabs in Firefox- one for Gitlab (a Git-based code repository) and one for Jenkins.  Jenkins is an open source automation tool to aid with DevOps and Continuous Integration and Continuous Delivery (CI/CD). <em>Watsonx Code Assistant for Z</em> is designed to integrate with your DevOps processes, and is ideally suited to a Git-based workflow.  This lab environment exemplifies this by using Gitlab as its Git-based code repository and Jenkins as its DevOps automation tool.</p>
 <ol>
 <li>
 <p>Save the changes in <em>GETMAVG.cbl</em> by choosing <em>File-&gt;Save</em> from the VS Code menu.</p>
@@ -1651,9 +1652,13 @@ This transformation is a three-step process.</p>
 <p><img alt="jenkins-ADDIBuildWCA4ZProject" src="../images/jenkins-ADDIBuildWCA4ZProject.png" /></p>
 </li>
 <li>
-<p>Click <em>ADDIBuildWCA4ZProject</em> and see that no previous builds have been run.</p>
+<p>Click <em>ADDIBuildWCA4ZProject</em> and see that no previous builds have been run, as indicated in the lower left where it should say <em>No builds</em> in the <em>Build History</em> box, as shown in this screen snippet:</p>
 <p><img alt="jenkins-ADDIBuildWCA4ZProject-2" src="../images/jenkins-ADDIBuildWCA4ZProject-2.png" /></p>
 </li>
+</ol>
+<h2 id="labs-transform-transform-the-refactored-service-code-from-cobol-to-java">Transform the Refactored Service Code from COBOL to Java<a class="headerlink" href="#labs-transform-transform-the-refactored-service-code-from-cobol-to-java" title="Permanent link">&para;</a></h2>
+<p>Now we'll get back to VS Code to begin the COBOL to Java transformation process.</p>
+<ol>
 <li>
 <p>Navigate back to VS Code. In the far left side of the screen, click the <em>Source Control</em> icon.</p>
 <p><img alt="vscode-source-control" src="../images/vscode-source-control.png" /></p>
@@ -1666,7 +1671,7 @@ This transformation is a three-step process.</p>
 <p><img alt="vscode-stage-changes-2" src="../images/vscode-stage-changes-2.png" /></p>
 </li>
 <li>
-<p>Add a commit message for the changes. E.g., <code>Adjustments after Refactoring in GETAAVG</code>. </p>
+<p>Add a commit message for the changes. E.g., <code>Adjustments after Refactoring in GETAAVG</code>. <strong>Pro tip:</strong> You can put whatever you want for a comment, but you have to put in at least one character.</p>
 </li>
 <li>
 <p>Click the <em>Commit &amp; Push</em> button.</p>
@@ -1685,7 +1690,7 @@ This transformation is a three-step process.</p>
 <p>Navigate back to the Jenkins page in your web browser.</p>
 </li>
 <li>
-<p>You should see a new job that was automatically triggered with your pushed changes. Wait until all stages of the job are completed.</p>
+<p>You should see a new job that was automatically triggered with your pushed changes. Wait until all stages of the job are completed successfully.  Greenish colors are good and reddish colors are not so good. </p>
 <p><img alt="jenkins-completed" src="../images/jenkins-completed.png" /></p>
 </li>
 <li>
@@ -1715,7 +1720,7 @@ Importing data into the database
 Done.
 </code></pre></div>
 <p>The program that you committed, <em>GETMAVG.cbl</em>, was detected, and metadata about the program, including information about the primary keys and foreign keys of the Db2 tables used by the program, is written to the database that watsonx Code Assistant for Z uses to help construct the prompt to the LLM.</p>
-<p><strong>Note:</strong> The Jenkins pipeline that is running here is not provided with watsonx Code Assistant for Z.  The pipeline takes advantages of components provided by watsonx Code Assistant for Z, but the pipeline itself is tailored to this lab environment.  There are other ways to create and store this metadata information, and in fact the way that it is created and stored has changed from version 1.1 to version 2.0 of watsonx Code Assistant for Z. This lab doesn't go into detail on this topic.</p>
+<p><strong>Note:</strong> The Jenkins pipeline that is running here is not provided with <em>watsonx Code Assistant for Z</em>.  The pipeline takes advantages of components provided by <em>watsonx Code Assistant for Z</em>, but the pipeline itself is tailored to this lab environment.  There are other ways to create and store this metadata information, and in fact the way that it is created and stored has changed from version 1.x to version 2.x of <em>watsonx Code Assistant for Z</em>. This lab doesn't go into detail on this topic.</p>
 </li>
 <li>
 <p>Navigate back to the GitLab tab in the browser and refresh it.</p>
@@ -1732,7 +1737,7 @@ Done.
 <p><img alt="gitlab-getmavg" src="../images/gitlab-getmavg.png" /> </p>
 <p><strong>Let's review</strong> Here's what transpired in the last several steps (from step 14 up to this point):</p>
 <ul>
-<li>When you did the <em>Commit and Push</em> in step 14, it pushed the changes you made with Refactoring Assistant up to the source code repository on your Gitlab server</li>
+<li>When you did the <em>Commit and Push</em> in step 4, it pushed the changes you made with Refactoring Assistant up to the source code repository on your Gitlab server</li>
 <li>This triggered the Jenkins pipeline which executed a series of steps.  The purpose of these steps was to inspect the code changes, incorporate them into an ADDI project associated with your source code repository, create metadata information that will be used for transforming the COBOL code to Java, and writing this metadata information to the IBM Cloud Db2 service that the watsonx Code Assistant for Z service uses.</li>
 </ul>
 </li>
@@ -1770,7 +1775,7 @@ Done.
 </li>
 <li>
 <p>Expand the different artifacts using the down arrows. Keep all of the default values.</p>
-<p>Notice that there are methods listed under the <em>Getmavg</em> package and the <em>WsWork</em> package. These are java methods that will correspond to COBOL paragraphs from the refactored COBOL program.  Watsonx Code Assistant for Z placed some of the methods in the <em>Getmavg</em> class and some in the <em>WsWork</em> class. Those classes that manipulate a group item are candidates to be placed in the class for that particular group item (e.g., <em>WsWork</em>) instead of in the class named for the refactored COBOL program (e.g., <em>Getmavg</em>).</p>
+<p>Notice that there are methods listed under the <em>Getmavg</em> package and the <em>WsWork</em> package. These are java methods that will correspond to COBOL paragraphs from the refactored COBOL program.  <em>Watsonx Code Assistant for Z</em> placed some of the methods in the <em>Getmavg</em> class and some in the <em>WsWork</em> class. Those classes that manipulate a group item are candidates to be placed in the class for that particular group item (e.g., <em>WsWork</em>) instead of in the class named for the refactored COBOL program (e.g., <em>Getmavg</em>).</p>
 <p><img alt="vscode-methods-inside-classes" height="791" src="../images/vscode-methods-inside-classes.png" width="650" /></p>
 </li>
 <li>
@@ -1815,12 +1820,12 @@ Done.
 <p><img alt="vscode-getAvgMotPremium3100-method" src="../images/vscode-getAvgMotPremium3100-method.png" /> </p>
 <p>The generated Java code <em>getAvgMotPremium3100</em> will be inserted into the body of the method.</p>
 <p><img alt="vscode-getAvgMotPremium3100-method-2" src="../images/vscode-getAvgMotPremium3100-method-2.png" /> </p>
-<p>In the left side menu, you can see that <em>getAvgMotPremium3100</em> now has a check mark next to its icon. This indicates that the method has been generated.
+<p>In the left side menu, you can see that <em>getAvgMotPremium3100</em> now has a check mark next to its icon. (Look closely, this is a small check mark on a tiny icon, so it is a bit of an "eye test".) This indicates that the method has been generated.
 Now that you've inserted the Java code into the method, you can close the <em>Java method generation</em> tab to reduce clutter in the VS Code window.</p>
 <p><img alt="vscode-checked" src="../images/vscode-checked.png" /> </p>
 </li>
 <li>
-<p>Repeat this process (steps 33-35) for the remaining methods, one method at a time, until they are all checked off.</p>
+<p>Repeat this process (steps 23-25) for the remaining methods, one method at a time, until they are all checked off.</p>
 <p><img alt="vscode-checked-2" src="../images/vscode-checked-2.png" /> </p>
 </li>
 </ol>
@@ -1839,20 +1844,24 @@ Now that you've inserted the Java code into the method, you can close the <em>Ja
 <p>You do not need to worry about every problem identified, just the ones in <em>WsWork.java</em> and <em>Getmavg.java</em> which are the two Java classes that contain methods that were generated by the LLM.</p>
 </li>
 <li>
-<p>Fix any errors in <em>WsWork.java</em>. To get rid of many trivial errors, hover over red-underlined text such as <em>PreparedStatement</em> in the screenshot below, click <em>Quick Fix</em>, and select <em>Add all missing imports</em>. </p>
+<p>Let's start with the errors in <em>WsWork.java</em>. </p>
+<p>We expect that you will receive a few errors of the type <em>NAME cannot be resolved to a type</em> where <em>NAME</em> will be <em>PreparedStatement</em>, <em>SQLException</em>, and <em>ResultSet</em>. These are easy to fix all at once- click on any one of these errors in the <em>Problem</em> view, and you will be taken to its occurrence in the code window.  Hover over the red-underlined text associated with the error, click <em>Quick fix</em>, and select <em>Add all missing imports</em>.  By choosing <em>Add all missing imports</em>, it will attempt to implement the fix for all of these missing types, one at a time.  See the screen-snippet below for hints on how to do this:</p>
 <p><img alt="vscode-missing-imports" src="../images/vscode-missing-imports.png" /></p>
-<p>Select the option that starts with <em>java.sql</em> for each import when they appear in the top bar.</p>
+<p><strong>Note:</strong> Be alert for a prompt at the top of your VS Code window which may appear if multiple Java libraries configured on your system offer this class. If prompted, select the option that starts with <em>java.sql</em> for each import.</p>
 </li>
 <li>
-<p>In the <em>WsWork.java</em> file, in the <em>getAvgMotPremium3100</em> method, change <code>connection</code> to <code>connection()</code>.  This is needed because the <em>JDBCConnection.java</em> class we are using does not provide a <em>connection</em> object, but rather a <em>connection</em> method.  This is an example of how a company-specific detail (e.g., using a company-mandated JDBC Connection class) might require a modification to the generated code.</p>
+<p>Still within the <em>WsWork.java</em> file, you may see two problems for <em>connection cannot be resolved or is not a field</em>. This is needed because the <em>JDBCConnection.java</em> class we are using does not provide a <em>connection</em> object, but rather a <em>connection</em> method.  This is an example of how a company-specific detail (e.g., using a company-mandated JDBC Connection class) might require a modification to the generated code. To resolve this, for each problem, click on it to be taken to the code, then, manually change <code>connection</code> to <code>connection()</code>.  The screen snippet below shows where to make this change in the <em>getAvgMotPremium3100()</em> method, but you will have to make this change in the <em>validateCustomer310a()</em> method as well.</p>
 <p><img alt="vscode-connection" src="../images/vscode-connection.png" /></p>
 </li>
 <li>
-<p>You may still have errors in <em>getAvtMotPremium3100()</em> stating that <code>sqlcode cannot be resolved to a variable</code>, similar to what is shown in the screen snippet below.  If you do, read the instructions below the screen snippet for advice on how to remediate this.</p>
+<p>You may notice a new problem has appeared under <em>WsWork.java</em>-  <em>Unhandled exception type ClassNotFoundException</em>.  This occurred when you changed <em>connection</em> to <em>connection()</em>.  You made that change in two places but you only received this problem once.  The problem is applicable to both places, but the tooling won't recognize it in the <em>getAvgMotPremium3100()</em> method until you resolve the <em>sqlCode cannot be resolved to a variable</em> problem, which we'll cover in the next step.  After that is resolved, we'll tell you how to fix the <em>ClassNotFoundException</em>-related problem.</p>
+</li>
+<li>
+<p>If you have errors in <em>getAvgMotPremium3100()</em> stating that <code>sqlcode cannot be resolved to a variable</code>, similar to what is shown in the screen snippet below, read the instructions below the screen snippet for advice on how to remediate this.  Follow the instructions carefully, you will do more typing or cutting and pasting in this step than any other step in the lab.</p>
 <p><img alt="vscode-sqlcode-unresolved" src="../images/vscode-sqlcode-unresolved.png" /></p>
 <p>This <code>sqlcode</code> Java variable originated from the COBOL variable <code>SQLCODE</code> which is defined in the <code>SQLCA</code> group data item. This variable holds the result of a SQL call.  In Java, a non-zero SQL code can be retrieved from the <em>getErrorCode()</em> method of the <em>SQLException</em> class.  Thus, one way to resolve this unreferenced variable is to move the handling of it into the <em>catch</em> clause that handles a <em>SQLException</em>.   Right now, the <em>sqlCode</em> variable is being checked after the <em>try/catch</em> statement.  We think we can improve upon the model's output here. Remember, <em>watsonx Code Assistant for Z</em> is an <em>assistant</em>- you are the boss, and you can overrule your assistant.</p>
 <p>The following set of instructions will provide guidance to help you to move the <code>sqlcode</code> variable to the <em>catch</em> clause, where it belongs, improving the code and resolving the problem.  To perform these steps you may have to do some typing, some cutting and pasting, and some deletions. This is probably the most difficult step in the lab- take care when performing this step, but, to be safe, we've included the complete source code for the <em>getAvgMotPremium3100()</em> at the end of this step for your reference.</p>
-<p>Change the catch clause of the SQLException from</p>
+<p>All three of the <em>sqlCode cannot be resolved to a variable</em> problems are very close to each other in the code.  Click on any one of them from the <em>Problems</em> view to be taken to the area of the code that you will be modifying.  Just above where these errors occur, you'll notice a <em>catch</em> clause.  Change this catch clause of the SQLException from</p>
 <p><div class="highlight"><pre><span></span><code>} catch (SQLException exception) {
         this.setWsStatusCode(&quot;02&quot;);
         endPara9000();
@@ -1873,7 +1882,7 @@ to</p>
 }
 </code></pre></div>
 <p>This handles non-zero SQL codes by setting <code>wsStatusCode</code> to 2 for SQL Code 100 and to 16 for any other non-zero SQL Code.  (This may seem odd but it is what the original COBOL was doing.)</p>
-<p>Since a SQL code of zero does not cause a SQLException, we can set <code>wsStatusCode</code> to <em>00</em> prior to making the SQL call.  Add <code>this.setWsStatusCode("00")</code> at the top of the <em>try</em> clause in <em>getAvgMotPremium3100()</em>, prior to making the SQL call.  See the code snippet below for where it belongs:</p>
+<p>Since a SQL code of zero does not cause a SQLException, we can set <code>wsStatusCode</code> to <em>00</em> prior to making the SQL call.  Add <code>this.setWsStatusCode("00")</code> at the top of the <em>try</em> clause (just a few lines above where you just matde the changes to the <em>catch</em> clause) in <em>getAvgMotPremium3100()</em>, prior to making the SQL call.  See the code snippet below for where it belongs:</p>
 <div class="highlight"><pre><span></span><code>...
   if (this.getWsCustomerExists() == &#39;Y&#39;) {
 try {
@@ -1897,11 +1906,14 @@ try {
 </code></pre></div>
 </li>
 <li>
-<p>You will probably still have a red underline indicating that another error remains. The 
-    <em>connection()</em> method throws a ClassNotFoundException, which is not handled by the try-catch block where our change was made. Hover 
-    over the red underline, click <em>Quick Fix</em>, then click <em>Add catch clause to surrounding try</em>. The red underline indicating an error should disappear.</p>
+<p>At this point you should see a second <em>Unhandled exception type ClassNotFoundException</em> problem appear in your <em>Problems</em> view. 
+    This problem appears because the 
+    <em>connection()</em> method throws a ClassNotFoundException, which is not handled by the <em>try/catch</em> block returned by the LLM. For each of these two problems, click on them in the <em>Problems</em> view to get to where they occur in the code window, hover 
+    over the red underline, click <em>Quick Fix</em>, then click <em>Add catch clause to surrounding try</em>. The red underline indicating an error should disappear. The screen snippet below gives hints from within the <em>getAvgMotPremium3100()</em> method, and you'll need to do this within the <em>validateCustomer310A()</em> method as well:</p>
 <p><img alt="vscode-connection-2" src="../images/vscode-connection-2.png" /></p>
-<p>That was a lot of code changes in <em>getAvgMotPremium3100()</em>, so, for your reference, this method should now look like the code shown here:</p>
+</li>
+<li>
+<p>The instructions had you making several changes in <em>getAvgMotPremium3100()</em>.  In case your edits didn't go smoothly, here is what this method should now look like.  If necessary, you could delete that method in your code window and replace it with the contents of the method shown here.  You won't have to do this if your editing went smoothly.</p>
 <div class="highlight"><pre><span></span><code>public void getAvgMotPremium3100() {
   this.setWsCustomerExists(&#39;Y&#39;);
   validateCustomer310A();
@@ -1936,10 +1948,6 @@ try {
 checkIfOverpaid4000();
 }
 </code></pre></div>
-</li>
-<li>
-<p>Go to method <em>validateCustomer310A</em> and repeat the previous steps to fix <code>connection</code>-  change <code>connection</code> to <code>connection()</code> and then use Quick Fix <em>add catch clause to surrounding try</em> when the unhandled <em>ClassNotFoundException</em> message occurs after changing <code>connection</code> to <code>connection()</code>.</p>
-<p><img alt="vscode-validatecustomerconnection" src="../images/vscode-validatecustomer-connection.png" /></p>
 </li>
 <li>
 <p>Any problems remaining in <em>Getmavg.java</em> or <em>WsWork.java</em> should be trivial- you may see one for an import that is never used.  You may delete the unused import using a quick fix.  Our empty COBOL paragraph <em>1000-EXIT</em> was turned into an empty method except for a <em>TODO comment</em>, so you can remove the <em>TODO comment</em> from the code as well to remove this from the problem list. Similarly, the <em>catch</em> clauses you added to fix the problems from the <em>JdbcConnection.connection()</em> method may each have a <em>TODO comment</em>, so you can remove these as well. </p>
@@ -2045,20 +2053,20 @@ checkIfOverpaid4000();
 <p><img alt="vscode-zosdev-logs" src="../images/vscode-zosdev-logs.png" /></p>
 </li>
 <li>
-<p>In the <em>COBOL/GETMAVG</em> folder, rename <code>sysprint.txt</code> to <code>getmavg.log</code>.</p>
+<p>In the <em>COBOL/GETMAVG</em> folder, right-click <code>sysprint.txt</code> and select <em>Rename...</em> and then rename the file to <code>getmavg.log</code>.</p>
 <p><img alt="vscode-getmavg-log" src="../images/vscode-getmavg-log.png" /></p>
 </li>
 </ol>
 <h3 id="labs-validate-generate-cobol-values">Generate COBOL values<a class="headerlink" href="#labs-validate-generate-cobol-values" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Right-click <em>getmavg.log</em>, hover over <em>watsonx code assistant for Z Validation Assistant</em>, and then select <em>Generate cobol values for testing</em>.</p>
+<p>Right-click <em>getmavg.log</em>, hover over <em>watsonx Code Assistant for Z Validation Assistant</em>, and then select <em>Generate COBOL Values for Testing</em>.</p>
 <p><img alt="vscode-cobol-values" src="../images/vscode-cobol-values.png" /></p>
 </li>
 <li>
-<p>You will be prompted to select a <em>Load library</em>. Enter or select <em>IBMUSER.WCA4Z.LOAD</em> and press enter. </p>
+<p>You will be prompted to select a <em>Load library</em> at the top middle of VS Code.  Enter or select <em>IBMUSER.WCA4Z.LOAD</em> and press enter. </p>
 <p><img alt="vscode-load" src="../images/vscode-load.png" /></p>
-<p>This step was successful if you see the message <em>Completed generating cobol values for testing</em> at the bottom of your <em>Output</em> window.</p>
+<p>This step was successful if you see the message <em>Completed generating cobol values for testing</em> at the bottom of your <em>Terminal</em> window.</p>
 <p><img alt="vscode-cobol-values-2" src="../images/vscode-cobol-values-2.png" /></p>
 </li>
 </ol>
@@ -2073,7 +2081,7 @@ checkIfOverpaid4000();
 <p><img alt="vscode-run-equivalence" src="../images/vscode-run-equivalence.png" /></p>
 <p>Wait until you see the message <em>Equivalency Tests Complete</em>. </p>
 <p><strong>Note:</strong> You may see an error message popup in the lower right that says <em>Failed to perform operation: SyntaxError: Expected double-quoted property name in JSON at position 188 (line 4 column 5)</em>.  You may ignore this message- it is due to a syntax error in a settings file provided in the lab environment.</p>
-<p>In the <em>IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT</em> pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.   Ask an instructor for help if your test didn't pass.</p>
+<p>In the <em>IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT</em> pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.  This pane is on the left, probably underneath the <em>TIMELINE</em> pane, and you will probably have to expand the pane in order to see these test results.   Ask an instructor for help if your test didn't pass.</p>
 </li>
 <li>
 <p>Repeat steps 1 and 2 for Java methods <em>checkIfOverpaid4000</em> and <em>MainPara1000</em>. </p>
