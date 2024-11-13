@@ -27,7 +27,7 @@ You can read more about GenApp [here](https://www.ibm.com/docs/en/cics-ts/6.1?to
 
 ## Explore the application using ADDI and IBM Developer for z/OS
 
-In simple terms, ADDI consists of features to *build* an ADDI project that contains detailed application information, and features to *analyze* the ADDI project that you have built. For this lab, the *build* process has alredy been performed against the *GenApp* project, and you will start with the *analyze* process, which you will perform within the [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} product, using the [*Application Discovery Browser Perspective*](https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective){target="_blank" rel"noopener"}. 
+In simple terms, ADDI consists of features to *build* an ADDI project that contains detailed application information, and features to *analyze* the ADDI project that you have built. For this lab, the *build* process has already been performed against the *GenApp* project, and you will start with the *analyze* process, which you will perform within the [*IBM Developer for z/OS (IDz)*](https://www.ibm.com/products/developer-for-zos){target="_blank" rel="noopener"} product, using the [*Application Discovery Browser Perspective*](https://www.ibm.com/docs/en/addi/6.1.3?topic=perspectives-application-discovery-browser-perspective){target="_blank" rel"noopener"}. 
 
 6. Open *IBM Developer for z/OS (IDz)* from the taskbar by single-clicking on the icon highlighted below. IDz is built on the open source Eclipse project.  The *ADDI Analyze Client* functionality is delivered via Eclipse-based plugins, so the application architect performs analysis within IDz using functionality provided by these plugins. 
 
@@ -77,7 +77,7 @@ In simple terms, ADDI consists of features to *build* an ADDI project that conta
 
     **Note:** Trying to zoom in and out on the graph in the zVA browser tab or window can be difficult- it is easy to get in a state where you wish you could start over.  You can- just close the graph by clicking the *x* icon on its tab and then repeat step 4 and this step.
 
-11. In the left-side of the page, you will see a *Graph Inventory*. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the *COBOL Programs* section to see the list of COBOL programs that are part of GenApp.
+11. In the left side of the page, you will see a *Graph Inventory*. Notice that the CICS transactions, COBOL Programs, and different object types have been identified. Expand the *COBOL Programs* section to see the list of COBOL programs that are part of GenApp.
 
     ![idz-inventory-cobol](../images/idz-inventory-cobol.png)
 
@@ -116,7 +116,7 @@ In simple terms, ADDI consists of features to *build* an ADDI project that conta
 
     For the purposes of this lab, let's assume that the application architect has identified the paragraph that implements the *Get Average Premium* functionality as a good candidate for refactoring.  (This is why we've highlighted *Get Average Premium* in the above list.)
 
-16. Scroll down to line 342 in the COBOL code until you find the *3100-GET-AVG-MOT-PREMIUM* paragraph. 
+16. Scroll down to line 342 in the COBOL code until you find the *3100-GET-AVG-MOT-PREMIUM* paragraph.  **Pro tip:** You may find that using *Navigate*->*Go to line...* from the IDz menu is a more enjoyable experience than scrolling.  
 
     ![idz-3100](../images/idz-3100.png)
 

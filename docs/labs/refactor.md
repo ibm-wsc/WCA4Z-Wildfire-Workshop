@@ -32,7 +32,7 @@ In addition to the *Refactoring Assistant* VS Code extension that you'll be usin
 
 The *Refactor* phase and the remaining phases in the lab (*Transform* and *Validate*) use VS Code.
 
-3. Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the *watsonx Code Assistant for Z* service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named *wca4z-key.txt* on the Windows Desktop.
+3. Before you start VS Code, let's get an API key that you will need to enter within VS Code that will grant you access to the *watsonx Code Assistant for Z* service that runs in IBM Cloud. In your lab environment that API Key is stored in a file on the Windows Desktop.  Open the text file named *wca4z-key.txt* on the Windows Desktop by double-clicking its icon.
    
     ![zva-desktop-apikey](../images/zva-desktop-apikey.png)
 
@@ -40,7 +40,7 @@ The *Refactor* phase and the remaining phases in the lab (*Transform* and *Valid
     
     ![notepad-apikey](../images/notepad-apikey.png)
 
-1.  Open *Visual Studio Code* (VS Code) by double-clicking its desktop shortcut.
+1.  Open *Visual Studio Code* (VS Code) by double-clicking its desktop shortcut.  (You may need to move or close the window containing your API key in order to see the desktop shortcut.)
 
     ![zva-desktop-vscode](../images/zva-desktop-vscode.png)
 
@@ -112,7 +112,7 @@ The *Refactor* phase and the remaining phases in the lab (*Transform* and *Valid
 15. A new input field will appear in the top middle of VS Code with a prompt to *Enter service name*.
 16. Provide a service name of `refactor` and press enter.
 
-    **Important**: This environment is configured such that you must provide the name `refactor` in this step, exactly as shown.  The reason for this is that a Jenkins pipeline that is triggered when you do a Git commit later expects to find artifacts in a folder of the name `refactor`, and what you enter in this step will be the name of the folder in which these artifacts are stored.
+    **Important**: This environment is configured such that you must provide the name `refactor` in this step, exactly as shown.  The reason for this is that a Jenkins pipeline that is triggered when you do a Git commit later expects to find artifacts in a folder of the name `refactor`, and what you enter in this step will be the name of the folder in which these artifacts are stored. This restriction is just a quirk based on how this particular lab environment was built, and is not a restriction of the *watsonx Code Assistant for Z* product.
 
     ![vscode-getaavg-0AVMOT-slice-refactor](../images/vscode-getaavg-0AVMOT-slice-refactor.png)
 

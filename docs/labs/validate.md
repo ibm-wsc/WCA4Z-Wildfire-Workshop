@@ -92,21 +92,21 @@ In the lab you will perform all of these steps in one sitting.  In the real worl
 
     ![vscode-zosdev-logs](../images/vscode-zosdev-logs.png)
 
-13. In the *COBOL/GETMAVG* folder, rename `sysprint.txt` to `getmavg.log`.
+13. In the *COBOL/GETMAVG* folder, right-click `sysprint.txt` and select *Rename...* and then rename the file to `getmavg.log`.
 
     ![vscode-getmavg-log](../images/vscode-getmavg-log.png)
 
 ### Generate COBOL values 
 
-14. Right-click *getmavg.log*, hover over *watsonx code assistant for Z Validation Assistant*, and then select *Generate cobol values for testing*.
+14. Right-click *getmavg.log*, hover over *watsonx Code Assistant for Z Validation Assistant*, and then select *Generate COBOL Values for Testing*.
 
     ![vscode-cobol-values](../images/vscode-cobol-values.png)
 
-15. You will be prompted to select a *Load library*. Enter or select *IBMUSER.WCA4Z.LOAD* and press enter. 
+15. You will be prompted to select a *Load library* at the top middle of VS Code.  Enter or select *IBMUSER.WCA4Z.LOAD* and press enter. 
 
     ![vscode-load](../images/vscode-load.png)
 
-    This step was successful if you see the message *Completed generating cobol values for testing* at the bottom of your *Output* window.
+    This step was successful if you see the message *Completed generating cobol values for testing* at the bottom of your *Terminal* window.
 
     ![vscode-cobol-values-2](../images/vscode-cobol-values-2.png)
 
@@ -124,7 +124,7 @@ In the lab you will perform all of these steps in one sitting.  In the real worl
 
     **Note:** You may see an error message popup in the lower right that says *Failed to perform operation: SyntaxError: Expected double-quoted property name in JSON at position 188 (line 4 column 5)*.  You may ignore this message- it is due to a syntax error in a settings file provided in the lab environment.
     
-    In the *IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT* pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.   Ask an instructor for help if your test didn't pass.
+    In the *IBM WATSONX CODE ASSISTANT FOR Z VALIDATION ASSISTANT* pane, a green checkmark icon next to the test means the test passed and a red 'x' icon next to the test means that it failed.  This pane is on the left, probably underneath the *TIMELINE* pane, and you will probably have to expand the pane in order to see these test results.   Ask an instructor for help if your test didn't pass.
 
 3. Repeat steps 1 and 2 for Java methods *checkIfOverpaid4000* and *MainPara1000*. 
 
