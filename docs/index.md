@@ -1,10 +1,5 @@
 # watsonx Code Assistant for Z Workshop
 
-## Note: Page under construction
-This page is under construction for our November 14, 2024 workshop.  For example, the presentation linked to below is from our September 19, 2024 workshop, and will be updated for November 14.    The *Lab Assignments* page may contain obsolete links from September 19, or it may contain no links, or it may contain links for November 14 but without the passwords needed to access the lab instances.
-
-Despite this construction debris, you may find the presentation and the lab instructions educational.  If you are reading this paragraph on your own, that is, outside of a Washington Systems Center-led workshop, and are interested in performing the labs, ask your IBM representative to contact one of the workshop owners listed at the bottom of this page.
-
 ## Agenda for November 14, 2024 workshop
 
 | Activity       | Time     | 
