@@ -8,6 +8,10 @@ The *TechZone lab URL* is used to access the **Code Explanation** section of the
 The remaining sections of the lab-  the **Understand**, **Refactor**, **Transform** and **Validate** phases- are performed on a *zVA* instance.  
 When you click on your unique *zVA lab URL* you will be presented with a new browser tab and a sign-in screen.   Enter **Administrator** as the userid. The password will be either listed in the table below in the *Administrator password* column or it will be distributed to you under separate cover.
 
+## CODE EXPLANATION LAB ## 
+All students should use this URL:    https://techzone.ibm.com/my/workshops/student/6736438be6fdd169e50e8722
+
+
 
 |Name| TechZone lab URL|TechZone lab password| zVA lab URL | Administrator password|
 |:--:|:-------------:|:--------------------:|:-:|:-:|
