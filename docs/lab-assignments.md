@@ -37,8 +37,8 @@ When you click on your unique *zVA lab URL* you will be presented with a new bro
 |Victor R.|[http://ibm.biz/wscwca4z24e](http://ibm.biz/wscwca4z24e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z24](http://ibm.biz/wscwca4z24){target=_new}|`yZLEKSnMcge2`|
 |Vincent T.|[http://ibm.biz/wscwca4z25e](http://ibm.biz/wscwca4z25e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z25](http://ibm.biz/wscwca4z25){target=_new}|`dxc7FSA4p986`|
 |Viswasarathy R.|[http://ibm.biz/wscwca4z26e](http://ibm.biz/wscwca4z26e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z26](http://ibm.biz/wscwca4z26){target=_new}|`tdL6au54JCH6`|
-|TBD|[http://ibm.biz/wscwca4z27e](http://ibm.biz/wscwca4z27e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z27](http://ibm.biz/wscwca4z27){target=_new}|`N/A`|
-|TBD|[http://ibm.biz/wscwca4z28e](http://ibm.biz/wscwca4z28e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z28e](http://ibm.biz/wscwca4z28){target=_new}|`N/A`|
+|Victoria P.|[http://ibm.biz/wscwca4z27e](http://ibm.biz/wscwca4z27e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z27](http://ibm.biz/wscwca4z27){target=_new}|`ae7suxBlaNgu`|
+|Lucas T.|[http://ibm.biz/wscwca4z28e](http://ibm.biz/wscwca4z28e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z28e](http://ibm.biz/wscwca4z28){target=_new}|`nh3X92zPcTgA`|
 |TBD|[http://ibm.biz/wscwca4z29e](http://ibm.biz/wscwca4z29e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z29](http://ibm.biz/wscwca4z29){target=_new}|`N/A`|
 |TBD|[http://ibm.biz/wscwca4z30e](http://ibm.biz/wscwca4z30e){target=_new}|`ocdU7W6vgYaZbTS`|[http://ibm.biz/wscwca4z30](http://ibm.biz/wscwca4z30){target=_new}|`N/A`|
 
