@@ -14,7 +14,7 @@ Despite this construction debris, you may find the presentation and the lab inst
 
 ## Presentation
 
-* [Presentation](presentations/watsonx Code Assistant for Z Overview - WSC Workshop September 19 2024.pdf)
+* [Presentation](presentations/watsonx Code Assistant for Z Overview - WSC Workshop November 14 2024.pdf)
 
 ## Lab
 
